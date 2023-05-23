@@ -5,6 +5,7 @@
 :root {
     --main-color: #2B8E8E;
     --secondary-color: #DCF4F4;
+    --black-color: #393939;
 }
 
 * {
@@ -46,17 +47,124 @@ a {
 
 header {
     width: 100%;
-    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    z-index: 99;
+    padding: 0px 20px;
+    border-bottom: 3px solid var(--main-color);
+    position: fixed;
+    background-color: white;
+}
+
+
+header section.main-nav {
     display: flex;
     justify-content: space-between;
-    padding: 0px 20px;
     align-items: center;
-    z-index: 99;
+    padding: 10px 0px;
+    gap: 30px;
+}
+
+header section.main-nav .logo>a {
+    color: var(--main-color);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+header .search {
+    display: none;
+}
+
+header .search input {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--main-color);
+}
+
+header .user-account {
+    display: none;
+}
+
+.user-account .user-profile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.user-account .user-information {
+    height: 100%;
+}
+
+.user-information .user {
+    color: var(--black-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+button.menu-bar {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease-in-out;
+}
+
+.line {
+    fill: none;
+    stroke: var(--main-color);
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.line-2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+
+.line-3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+
+.opened .line-1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+
+.opened .line-2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+
+.opened .line-3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
 }
 
 header nav {
-    display: flex;
-    gap: 10px;
+    display: none;
 }
 
 /* End Heaaer */
@@ -64,7 +172,7 @@ header nav {
 /* Start Main */
 
 main {
-    padding: 20px;
+    padding-top: 60px;
     height: 600px;
 }
 
