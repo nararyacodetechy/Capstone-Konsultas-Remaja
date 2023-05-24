@@ -32,7 +32,7 @@ li {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--main-color);
 }
 
 /* End Configuration Tag Style Design System */
@@ -183,11 +183,76 @@ main {
 /* Start Footer  */
 
 footer {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     bottom: 0;
     width: 100%;
     z-index: 99;
-    background-color: var(--main-color);
+    background-color: white;
+    padding: 20px;
+    color: var(--main-color);
+}
+
+section.main-footer {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.company {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.company .newsletter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.company .newsletter input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+}
+
+.company .newsletter label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.company .social-media ul {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.footer-links .link {
+    display: grid;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 8px;
+}
+
+.footer-links .link h4 {
+    margin-bottom: 10px;
+}
+
+section.copyright {
+    margin-top: 20px;
+    text-align: center;
 }
 
 /* End Footer */
