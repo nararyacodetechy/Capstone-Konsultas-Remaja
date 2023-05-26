@@ -8,6 +8,8 @@
 
 /* Tablet Size Responsive */
 @media screen and (min-width: 640px) {
+    /* Start Header */
+
     header {
         padding: 0px 50px;
     }
@@ -33,9 +35,41 @@
         display: none;
     }
 
+    /* End Header */
+
+    /* ============================================== */
+
+    /* Start Main */
+
     main {
         padding-top: 100px;
     }
+
+    /* Start Section Autentication Register Page and Login Page */
+
+    section.autentication {
+        padding: 50px;
+    }
+
+    .container.autentication form {
+        order: 1;
+    }
+
+    .container.autentication .ilustration {
+        order: 2;
+    }
+
+    .container.autentication .ilustration img {
+        border-radius: 0px 20px 20px 0;
+    }
+
+    /* End Section Autentication Register Page and Login Page */
+
+    /* End Main */
+
+    /* ============================================== */
+
+    /* Start Footer */
 
     footer {
         padding: 50px;
@@ -62,6 +96,9 @@
     section.copyright {
         margin-top: 50px;
     }
+
+    /* End Footer */
+
 }
 
 /* Desktop Size Responsive */
