@@ -5,7 +5,7 @@
 :root {
     --main-color: #2B8E8E;
     --secondary-color: #DCF4F4;
-    --black-color: #393939;
+    --black-color: #404040;
 }
 
 * {
@@ -175,6 +175,7 @@ main {
     padding-top: 60px;
     width: 100%;
     height: auto;
+    min-height: 100vh;
 }
 
 /* Start Section Autentication Register Page and Login Page */
@@ -285,6 +286,116 @@ section.autentication {
     border-radius: 20px 20px 0px 10px;
 }
 
+section.consultants {
+    position: relative;
+}
+
+.main-title {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 10px;
+}
+
+.main-title label {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--black-color);
+}
+
+.main-title select {
+    padding: 15px 5px;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    width: 400px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--black-color);
+}
+
+.list-consultant {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    font-size: 14px;
+}
+
+.card-consultant {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.content-card {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.content-card .profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.content-card .description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-card .description h5 {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.content-card .description p {
+    color: var(--main-color);
+}
+
+.content-card .description .rate-experience {
+    display: flex;
+    gap: 20px;
+}
+
+.content-card .description .rate-experience .experience i {
+    color: var(--main-color);
+}
+
+.action-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 0 0 8px 8px;
+}
+
+.action-card h5 {
+    font-size: 16px;
+    color: var(--main-color);
+}
+
+.action-card .button {
+    display: flex;
+    gap: 20px;
+}
+
+.action-card .button .detail {
+    border: 1px solid var(--main-color);
+    padding: 5px 20px;
+    border-radius: 8px;
+}
+
+.action-card .button .schedule {
+    border: 1px solid var(--main-color);
+    padding: 5px 20px;
+    border-radius: 8px;
+    background-color: var(--main-color);
+    color: white;
+}
+
 /* Start Section Autentication Register Page and Login Page */
 
 /* End Main */
@@ -307,7 +418,7 @@ footer {
 section.main-footer {
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
@@ -316,6 +427,7 @@ section.main-footer {
     flex-direction: column;
     gap: 10px;
     text-align: center;
+    width: 100%;
 }
 
 .company .newsletter {
