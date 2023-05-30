@@ -1,87 +1,199 @@
 /* Mini Tablet Size Responsive */
 @media screen and (min-width: 480px) {
+  /* Transaction */
+	.transaction-container {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+
+		grid-column-start: 1;
+		grid-column-end: 3;
+
+		padding: 0 20px;
+		background-color: #ffffff;
+	}
+
+	.payment-container div form {
+		display: grid;
+		grid-template-columns: 30px 1fr 1fr;
+	}
+
+	div.e-wallet {
+		border-radius: 5px;
+		padding: 10px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+		margin-bottom: 5px;
+	}
+
+	div.virtual-account {
+		border-radius: 5px;
+		padding: 10px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+		margin-bottom: 5px;
+	}
+
+	div.credit-card {
+		grid-row-start: 3;
+		border-radius: 5px;
+		padding: 10px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+		margin-bottom: 5px;
+	}
+
+	/* Reciept */
+	.reciept-container {
+		display: grid;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		border-radius: 5px;
+		margin-left: 0px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+
+		height: fit-content;
+	}
+
+	.reciept-container form input {
+		grid-column-start: 1;
+		grid-column-end: 4;
+		width: 100%;
+		padding: 12px 20px;
+		margin: 12px;
+		display: inline-block;
+		border: 4px solid #2b8e8e;
+		border-radius: 4px;
+		box-sizing: border-box;
+		font-size: 1em;
+	}
+  
+  /* ============================================== */
+  
+  /* Start Footer */
 	.footer-links .link {
 		justify-content: left;
 		text-align: left;
 	}
+  /* End Footer */
+  
 }
 
 /* Tablet Size Responsive */
 @media screen and (min-width: 640px) {
-	header {
-		padding: 0px 50px;
-	}
+    /* Start Header */
 
-	header .user-account {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-	}
+    header {
+        padding: 0px 50px;
+    }
 
-	header nav {
-		display: flex;
-		justify-content: space-between;
-		padding-bottom: 10px;
-	}
+    header .user-account {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
-	header nav li a {
-		font-weight: 600;
-		color: var(--main-color);
-	}
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
 
-	button.menu-bar {
-		display: none;
-	}
+    header nav li a {
+        font-weight: 600;
+        color: var(--main-color);
+    }
 
-	main {
-		padding-top: 100px;
-	}
+    button.menu-bar {
+        display: none;
+    }
 
-	footer {
-		padding: 50px;
-	}
+    /* End Header */
 
-	section.main-footer {
-		flex-direction: row;
-		text-align: left;
-		grid-template-columns: 30% 70%;
-	}
+    /* ============================================== */
 
-	.company {
-		text-align: left;
-	}
+    /* Start Main */
 
-	.company .social-media ul {
-		justify-content: left;
-	}
+    main {
+        padding-top: 100px;
+    }
 
-	.footer-links {
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-	}
+    /* Start Section Autentication Register Page and Login Page */
 
-	section.copyright {
-		margin-top: 50px;
-	}
+    section.autentication {
+        padding: 50px;
+    }
+
+    .container.autentication form {
+        order: 1;
+    }
+
+    .container.autentication .ilustration {
+        order: 2;
+    }
+
+    .container.autentication .ilustration img {
+        border-radius: 0px 20px 20px 0;
+    }
+
+    section.consultants {
+        padding: 50px;
+    }
+
+    /* End Section Autentication Register Page and Login Page */
+
+    /* End Main */
+
+    /* ============================================== */
+
+    /* Start Footer */
+
+    footer {
+        padding: 50px;
+    }
+
+    section.main-footer {
+        flex-direction: row;
+        text-align: left;
+        grid-template-columns: 30% 70%;
+    }
+
+    .company {
+        text-align: left;
+    }
+
+    .company .social-media ul {
+        justify-content: left;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    section.copyright {
+        margin-top: 50px;
+    }
+
+    /* End Footer */
 }
 
 /* Desktop Size Responsive */
-@media screen and (min-width: 1200px) {
-	header .search {
-		width: 100%;
-		height: 100%;
-		max-width: 500px;
-		display: inline;
-	}
-
-	.footer-links .link {
-		justify-content: center;
-	}
-}
-
-/* Andika */
-/* Booking PAGE */
 @media screen and (min-width: 1024px) {
-	.booking-container {
+  /* Start Header */
+  header .search {
+      width: 100%;
+      height: 100%;
+      max-width: 500px;
+      display: inline;
+  }
+  /* End Header */
+  
+  /* ============================================== */
+  
+  /* Andika */
+  /* Booking PAGE */
+  /* Start Booking Page */
+  .booking-container {
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		gap: 10px;
@@ -194,80 +306,9 @@
 	.selected-profile > div.button > button:hover {
 		background-color: #279595;
 	}
-}
-/* Checkout Page */
-@media screen and (min-width: 480px) {
-	/* Transaction */
-	.transaction-container {
-		display: grid;
-		grid-template-columns: 3fr 1fr;
-
-		grid-column-start: 1;
-		grid-column-end: 3;
-
-		padding: 0 20px;
-		background-color: #ffffff;
-	}
-
-	.payment-container div form {
-		display: grid;
-		grid-template-columns: 30px 1fr 1fr;
-	}
-
-	div.e-wallet {
-		border-radius: 5px;
-		padding: 10px;
-		background-color: #ffffff;
-		box-shadow: 0px 0px 5px 3px #eee;
-		margin-bottom: 5px;
-	}
-
-	div.virtual-account {
-		border-radius: 5px;
-		padding: 10px;
-		background-color: #ffffff;
-		box-shadow: 0px 0px 5px 3px #eee;
-		margin-bottom: 5px;
-	}
-
-	div.credit-card {
-		grid-row-start: 3;
-		border-radius: 5px;
-		padding: 10px;
-		background-color: #ffffff;
-		box-shadow: 0px 0px 5px 3px #eee;
-		margin-bottom: 5px;
-	}
-
-	/* Reciept */
-	.reciept-container {
-		display: grid;
-		grid-column-start: 1;
-		grid-column-end: 3;
-		border-radius: 5px;
-		margin-left: 0px;
-		background-color: #ffffff;
-		box-shadow: 0px 0px 5px 3px #eee;
-
-		height: fit-content;
-	}
-
-	.reciept-container form input {
-		grid-column-start: 1;
-		grid-column-end: 4;
-		width: 100%;
-		padding: 12px 20px;
-		margin: 12px;
-		display: inline-block;
-		border: 4px solid #2b8e8e;
-		border-radius: 4px;
-		box-sizing: border-box;
-		font-size: 1em;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	/* Transaction */
+  /* End Booking Page */
+  
+  /* Transaction */
 	.transaction-container {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
@@ -437,4 +478,12 @@
 	.label.payment {
 		font-weight: bold;
 	}
+  
+  /* ============================================== */
+  
+  /* Start Footer */
+  .footer-links .link {
+      justify-content: center;
+  }
+  /* End Footer */
 }
