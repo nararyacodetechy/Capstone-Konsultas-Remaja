@@ -1,13 +1,87 @@
 /* Mini Tablet Size Responsive */
 @media screen and (min-width: 480px) {
-    .footer-links .link {
-        justify-content: left;
-        text-align: left;
-    }
+  /* Transaction */
+	.transaction-container {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+
+		grid-column-start: 1;
+		grid-column-end: 3;
+
+		padding: 0 20px;
+		background-color: #ffffff;
+	}
+
+	.payment-container div form {
+		display: grid;
+		grid-template-columns: 30px 1fr 1fr;
+	}
+
+	div.e-wallet {
+		border-radius: 5px;
+		padding: 10px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+		margin-bottom: 5px;
+	}
+
+	div.virtual-account {
+		border-radius: 5px;
+		padding: 10px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+		margin-bottom: 5px;
+	}
+
+	div.credit-card {
+		grid-row-start: 3;
+		border-radius: 5px;
+		padding: 10px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+		margin-bottom: 5px;
+	}
+
+	/* Reciept */
+	.reciept-container {
+		display: grid;
+		grid-column-start: 1;
+		grid-column-end: 3;
+		border-radius: 5px;
+		margin-left: 0px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+		height: fit-content;
+	}
+
+	.reciept-container form input {
+		grid-column-start: 1;
+		grid-column-end: 4;
+		width: 100%;
+		padding: 12px 20px;
+		margin: 12px;
+		display: inline-block;
+		border: 4px solid #2b8e8e;
+		border-radius: 4px;
+		box-sizing: border-box;
+		font-size: 1em;
+	}
+  
+  /* ============================================== */
+  
+  /* Start Footer */
+	.footer-links .link {
+		justify-content: left;
+		text-align: left;
+	}
+  /* End Footer */
+  
 }
 
 /* Tablet Size Responsive */
 @media screen and (min-width: 640px) {
+    /* Start Header */
+
     header {
         padding: 0px 50px;
     }
@@ -33,9 +107,53 @@
         display: none;
     }
 
-    /* main {
+    /* End Header */
+
+    /* ============================================== */
+
+    /* Start Main */
+
+    main {
         padding-top: 100px;
-    } */
+    }
+
+    /* Start Section Autentication Register Page and Login Page */
+
+    section.autentication {
+        padding: 50px;
+    }
+
+    .container.autentication form {
+        order: 1;
+    }
+
+    .container.autentication .ilustration {
+        order: 2;
+    }
+
+    .container.autentication .ilustration img {
+        border-radius: 0px 20px 20px 0;
+    }
+
+    section.consultants {
+        padding: 50px;
+    }
+
+    /* End Section Autentication Register Page and Login Page */
+  
+    .container, .container-sm {
+        max-width: 540px;
+    }
+  
+    .align-items-center {
+        align-items: center!important;
+    }
+
+    /* End Main */
+
+    /* ============================================== */
+
+    /* Start Footer */
 
     footer {
         padding: 50px;
@@ -62,18 +180,27 @@
     section.copyright {
         margin-top: 50px;
     }
-
-    .container, .container-sm {
-        max-width: 540px;
-    }
-    .align-items-center {
-        align-items: center!important;
-    }
 }
 
-
-@media (min-width: 992px){
-    .col-lg-4 {
+/* Desktop Size Responsive */
+@media screen and (min-width: 1024px) {
+  /* Start Header */
+  header .search {
+      width: 100%;
+      height: 100%;
+      max-width: 500px;
+      display: inline;
+  }
+  /* End Header */
+  
+  /* ============================================== */
+  
+  /* Start Section Home Page */
+      #hero {
+        background-attachment: fixed;
+    }
+  
+  .col-lg-4 {
         flex: 0 0 auto;
         width: 33.33333333%;
     }
@@ -95,24 +222,8 @@
         padding-right: 3rem!important;
         padding-left: 3rem!important;
     }
-}
-
-@media (min-width: 1024px){
-    #hero {
-        background-attachment: fixed;
-    }
-}
-
-/* Desktop Size Responsive */
-@media screen and (min-width: 1200px) {
-    header .search {
-        width: 100%;
-        height: 100%;
-        max-width: 500px;
-        display: inline;
-    }
-
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
+  
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 1140px;
     }
     .align-items-center {
@@ -134,14 +245,306 @@
         flex: 0 0 auto;
         width: 58.33333333%;
     }
-
-    .footer-links .link {
-        justify-content: center;
-    }
-}
-
-@media (min-width: 1400px){
-    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1320px;
     }
+/* End Section Home Page */
+  
+  /* Andika */
+  /* Booking PAGE */
+  /* Start Booking Page */
+  .booking-container {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 10px;
+		border-radius: 5px;
+		background-color: #ffffff;
+		padding: 20px 40px;
+	}
+
+	input[type="date"],
+	input[type="time"],
+	select {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 4px solid #2b8e8e;
+		border-radius: 4px;
+		box-sizing: border-box;
+		font-size: 1em;
+	}
+
+	input[type="submit"] {
+		width: 100%;
+		background-color: #2b8e8e;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	input[type="submit"]:hover {
+		background-color: #279595;
+	}
+
+	.booking {
+		border-radius: 5px;
+		padding: 20px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+	}
+
+	h1.lable-booking {
+		background-color: #ffffff;
+		padding: 20px;
+	}
+
+	.selected-profile {
+		border-radius: 5px;
+		padding: 20px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+	}
+
+	.selected-profile * {
+		margin: 8px 0;
+	}
+	.selected-profile > h1 {
+		font-size: 1.5em;
+	}
+	.selected-profile > h2 {
+		font-size: 1em;
+		color: #2b8e8e;
+	}
+	.selected-profile > div {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+	}
+	.selected-profile > div > img {
+		justify-self: center;
+		width: 100%;
+	}
+
+	.selected-profile > div > h1 {
+		font-size: 1.2em;
+		align-self: center;
+		margin: 0 10px;
+	}
+
+	.selected-profile div.price {
+		border: solid 3px #2b8e8e;
+		border-radius: 5px;
+		font-size: 1.3em;
+		display: flex;
+		justify-content: center;
+		color: #2b8e8e;
+		padding: 5px 0;
+	}
+
+	.selected-profile > div.button {
+		margin-top: 20px;
+		width: 100%;
+		background-color: #dcf4f4;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.selected-profile > div.button > button {
+		width: 40%;
+		background-color: #2b8e8e;
+		color: white;
+		padding: 8px;
+		margin: 8px;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+
+	.selected-profile > div.button > button:hover {
+		background-color: #279595;
+	}
+  /* End Booking Page */
+  
+  /* Transaction */
+	.transaction-container {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+
+		grid-column-start: 1;
+		grid-column-end: 3;
+
+		padding: 0 20px;
+		background-color: #ffffff;
+	}
+
+	.payment-container div form {
+		display: grid;
+		grid-template-columns: 30px 1fr 1fr;
+	}
+
+	div.e-wallet {
+		border-radius: 5px;
+		padding: 10px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+		margin-bottom: 5px;
+	}
+
+	div.virtual-account {
+		border-radius: 5px;
+		padding: 10px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+		margin-bottom: 5px;
+	}
+
+	div.credit-card {
+		grid-row-start: 3;
+		border-radius: 5px;
+		padding: 10px;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+		margin-bottom: 5px;
+	}
+
+	/* Reciept */
+	.reciept-container {
+		display: grid;
+		grid-column-start: 2;
+		grid-column-end: 3;
+
+		grid-row-start: 1;
+		grid-row-end: 5;
+		border-radius: 5px;
+		margin-left: 10px;
+		margin-top: 0;
+		background-color: #ffffff;
+		box-shadow: 0px 0px 5px 3px #eee;
+
+		height: fit-content;
+	}
+
+	.reciept-container form input {
+		grid-column-start: 1;
+		grid-column-end: 4;
+		width: 100%;
+		padding: 12px 20px;
+		margin: 12px;
+		display: inline-block;
+		border: 4px solid #2b8e8e;
+		border-radius: 4px;
+		box-sizing: border-box;
+		font-size: 1em;
+	}
+
+	/* detail */
+	.detail-container {
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+	.detail-container img {
+		grid-row-start: 1;
+		grid-row-end: 5;
+
+		grid-column-start: 1;
+		grid-column-end: 2;
+		align-self: center;
+		justify-self: center;
+		height: 80%;
+		margin-right: 10px;
+	}
+
+	.detail-container h1 {
+		font-size: 1.5rem;
+	}
+
+	.detail-container p.specialist {
+		grid-column-start: 2;
+		grid-column-end: 3;
+
+		color: #2b8e8e;
+		font-size: 0.9rem;
+	}
+
+	.detail-container p.price {
+		grid-column-start: 2;
+		grid-column-end: 3;
+
+		color: #2b8e8e;
+		font-size: 1rem;
+	}
+
+	.detail-container div.rating {
+		grid-column-start: 2;
+		grid-column-end: 3;
+
+		display: flex;
+	}
+	.detail-container div.rating div {
+		margin-right: 30px;
+	}
+
+	.detail-container div.button {
+		grid-column-start: 1;
+		grid-column-end: 3;
+
+		justify-self: end;
+	}
+
+	/* Payment */
+	.payment-label {
+		grid-column-start: 1;
+		grid-column-end: 2;
+
+		margin: 20px 0;
+		font-size: 0.7rem;
+	}
+
+	.payment-container {
+		grid-column-start: 1;
+		grid-column-end: 2;
+
+		display: grid;
+		grid-template-rows: auto;
+	}
+
+	.payment-container div form div {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+
+	.payment-container div form p {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+	div.e-wallet form input,
+	div.virtual-account form input,
+	div.credit-card form input {
+		width: 20px;
+		justify-self: center;
+	}
+	.payment-container div form label {
+		align-self: center;
+	}
+
+	.payment-container div form img {
+		justify-self: end;
+	}
+
+	.label.payment {
+		font-weight: bold;
+	}
+  
+  /* ============================================== */
+  
+  /* Start Footer */
+  .footer-links .link {
+      justify-content: center;
+  }
+  /* End Footer */
 }
