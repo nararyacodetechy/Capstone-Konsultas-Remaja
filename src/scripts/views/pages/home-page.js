@@ -220,7 +220,7 @@ const HomePage = {
         <div class="testimonials-slider">
             <div class="testimonials-slider-inner">
                 <div class="testimonial-item">
-                    <img src="testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                    <img src="./images/home-page/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                     <h3>Deddy Corbuzier</h3>
                     <h4>Mahasiswa</h4>
                     <p>
@@ -234,7 +234,7 @@ const HomePage = {
                     </p>
                 </div>
                 <div class="testimonial-item">
-                    <img src="testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                    <img src="./images/home-page/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                     <h3>Pevita Pearce</h3>
                     <h4>Pelajar</h4>
                     <p>
@@ -248,7 +248,7 @@ const HomePage = {
                     </p>
                 </div>
                 <div class="testimonial-item">
-                    <img src="testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                    <img src="./images/home-page/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                     <h3>Ayu Tingting</h3>
                     <h4>Penjual Gorengan</h4>
                     <p>
@@ -262,7 +262,7 @@ const HomePage = {
                     </p>
                 </div>
                 <div class="testimonial-item">
-                    <img src="testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                    <img src="./images/home-page/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                     <h3>Tanboy Kun</h3>
                     <h4>Petani</h4>
                     <p>
@@ -276,7 +276,7 @@ const HomePage = {
                     </p>
                 </div>
                     <div class="testimonial-item">
-                        <img src="testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                        <img src="./images/home-page/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                         <h3>Lionel Messi</h3>
                         <h4>Atlet Lempar Lembing</h4>
                         <p>
@@ -300,31 +300,31 @@ const HomePage = {
         </div>
         <div class="box">
             <div class="box-item">
-                <img src="flow/register.png" alt="Image 1">
+                <img src="./images/home-page/flow/register.png" alt="Image 1">
                 <h2>Login</h2>
             </div>
             <div class="box-item">
-                <img src="flow/login.png" alt="Image 2">
+                <img src="./images/home-page/flow/login.png" alt="Image 2">
                 <h2>Register</h2>
             </div>
             <div class="box-item">
-                <img src="flow/home.png" alt="Image 3">
+                <img src="./images/home-page/flow/home.png" alt="Image 3">
                 <h2>Home</h2>
             </div>
             <div class="box-item">
-                <img src="flow/layanan.png" alt="Image 4">
+                <img src="./images/home-page/flow/layanan.png" alt="Image 4">
                 <h2>Cari Layanan</h2>
             </div>
             <div class="box-item">
-                <img src="flow/konsultan.png" alt="Image 5">
+                <img src="./images/home-page/flow/konsultan.png" alt="Image 5">
                 <h2>Pilih Konsultan</h2>
             </div>
             <div class="box-item">
-                <img src="flow/jadwal.png" alt="Image 6">
+                <img src="./images/home-page/flow/jadwal.png" alt="Image 6">
                 <h2>Buat Jadwal</h2>
             </div>
             <div class="box-item">
-                <img src="flow/chat.png" alt="Image 7">
+                <img src="./images/home-page/flow/chat.png" alt="Image 7">
                 <h2>Chat WhatsApp</h2>
             </div>
         </div>
@@ -334,9 +334,9 @@ const HomePage = {
         <h1 class="judul">Bekerja sama dengan <span class="highlight">kami</span></h1>
         <p class="paragraf"><span class="highlight">YoungMinds</span> menyediakan layanan edukasi dan konsultasi seputar masalah kesehatan mental kamu.</p>
         <div class="gambar">
-            <img src="partner/mbkm.png" alt="Gambar 1">
-            <img src="partner/dicoding.png" alt="Gambar 2">
-            <img src="partner/posyandu.png" alt="Gambar 3">
+            <img src="./images/home-page/partner/mbkm.png" alt="Gambar 1">
+            <img src="./images/home-page/partner/dicoding.png" alt="Gambar 2">
+            <img src="./images/home-page/partner/posyandu.png" alt="Gambar 3">
         </div>
     </section>
 
