@@ -141,7 +141,19 @@
 		padding: 50px;
 	}
 
+	.list-consultant {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
 	/* End Section Autentication Register Page and Login Page */
+
+	/* Start Detail Page  */
+	section.detail-consultant {
+		background-color: var(--body-color);
+		padding: 50px;
+	}
+
+	/* End Detail Page  */
 
 	.container, .container-sm {
 		max-width: 540px;
