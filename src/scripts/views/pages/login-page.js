@@ -15,11 +15,11 @@ const LoginPage = {
             </div>
             <div class="choices-login">
               <li>Login dengan</li>
-              <a href=""><img src="./images/autentication/google-login.png" class="google-login"></a>
+              <a href=""><img src="./images/autentication-page/google-login.png" class="google-login"></a>
             </div>
           </form>
           <div class="ilustration">
-            <img src="./images/autentication/login-ilustration.png">
+            <img src="./images/autentication-page/login-ilustration.png">
           </div>
         </div>
       </section>
