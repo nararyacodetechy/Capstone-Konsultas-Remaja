@@ -799,8 +799,6 @@ section {
 }
 
 .gambar img {
-  width: 100px;
-  height: 100px;
   width: 100%;
   height: auto;
   min-height: 100vh;
