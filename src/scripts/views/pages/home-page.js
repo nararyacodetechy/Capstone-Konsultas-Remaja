@@ -1,6 +1,15 @@
 const HomePage = {
   async render() {
     return `
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container">            
+            <h1>Mari Konsultasi Bersama Kami</h1>
+            <h2>Posyandu Remaja demi generasi bangsa!</h2>
+            <a href="#/register-page" class="btn-get-started scrollto">Login</a>
+        </div>
+    </section><!-- End Hero -->
+    
     <section id="why-us" class="why-us">
         <div class="container">
             <div class="row">
@@ -14,7 +23,7 @@ const HomePage = {
                             quibusdam vel necessitatibus optio ad corporis.
                         </p>
                         <div class="text-center">
-                            <a href="#" class="more-btn">Learn More
+                            <a href="#services" class="more-btn">Learn More
                                 <i class="bx bx-chevron-right"></i>
                             </a>
                         </div>
