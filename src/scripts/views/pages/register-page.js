@@ -20,7 +20,7 @@ const RegisterPage = {
               </div>
             </form>
             <div class="ilustration">
-              <img src="./images/autentication/register-ilustration.png">
+              <img src="./images/autentication-page/register-ilustration.png">
             </div>
           </div>
         </section>

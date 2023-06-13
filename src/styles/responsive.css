@@ -1,6 +1,7 @@
 /* Mini Tablet Size Responsive */
 @media screen and (min-width: 480px) {
-  /* Transaction */
+
+	/* Transaction */
 	.transaction-container {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
@@ -66,195 +67,227 @@
 		box-sizing: border-box;
 		font-size: 1em;
 	}
-  
-  /* ============================================== */
-  
-  /* Start Footer */
+
+	/* ============================================== */
+
+	/* Start Footer */
 	.footer-links .link {
 		justify-content: left;
 		text-align: left;
 	}
-  /* End Footer */
-  
+
+	/* End Footer */
+
 }
 
 /* Tablet Size Responsive */
 @media screen and (min-width: 640px) {
-    /* Start Header */
+	/* Start Header */
 
-    header {
-        padding: 0px 50px;
-    }
+	header {
+		padding: 0px 50px;
+	}
 
-    header .user-account {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+	header .user-account {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
 
-    header nav {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 10px;
-    }
+	header nav {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 10px;
+	}
 
-    header nav li a {
-        font-weight: 600;
-        color: var(--main-color);
-    }
+	header nav li a {
+		font-weight: 600;
+		color: var(--main-color);
+	}
 
-    button.menu-bar {
-        display: none;
-    }
+	button.menu-bar {
+		display: none;
+	}
 
-    /* End Header */
+	/* End Header */
 
-    /* ============================================== */
+	/* ============================================== */
 
-    /* Start Main */
+	/* Start Main */
 
-    main {
-        padding-top: 100px;
-    }
+	main {
+		padding-top: 100px;
+	}
 
-    /* Start Section Autentication Register Page and Login Page */
+	/* Start Section Autentication Register Page and Login Page */
 
-    section.autentication {
-        padding: 50px;
-    }
+	section.autentication {
+		padding: 50px;
+	}
 
-    .container.autentication form {
-        order: 1;
-    }
+	.container.autentication form {
+		order: 1;
+	}
 
-    .container.autentication .ilustration {
-        order: 2;
-    }
+	.container.autentication .ilustration {
+		order: 2;
+	}
 
-    .container.autentication .ilustration img {
-        border-radius: 0px 20px 20px 0;
-    }
+	.container.autentication .ilustration img {
+		border-radius: 0px 20px 20px 0;
+	}
 
-    section.consultants {
-        padding: 50px;
-    }
+	section.consultants {
+		padding: 50px;
+	}
 
-    /* End Section Autentication Register Page and Login Page */
-  
-    .container, .container-sm {
-        max-width: 540px;
-    }
-  
-    .align-items-center {
-        align-items: center!important;
-    }
+	.list-consultant {
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
 
-    /* End Main */
+	/* End Section Autentication Register Page and Login Page */
 
-    /* ============================================== */
+	/* Start Detail Page  */
+	section.detail-consultant {
+		background-color: var(--body-color);
+		padding: 50px;
+	}
 
-    /* Start Footer */
+	/* End Detail Page  */
 
-    footer {
-        padding: 50px;
-    }
+	.container, .container-sm {
+		max-width: 540px;
+		padding: 0 20px;
+		margin-right: auto;
+		margin-left: auto;
+	}
 
-    section.main-footer {
-        flex-direction: row;
-        text-align: left;
-        grid-template-columns: 30% 70%;
-    }
+	.align-items-center {
+		align-items: center !important;
+	}
 
-    .company {
-        text-align: left;
-    }
+	/* End Main */
 
-    .company .social-media ul {
-        justify-content: left;
-    }
+	/* ============================================== */
 
-    .footer-links {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
+	/* Start Footer */
 
-    section.copyright {
-        margin-top: 50px;
-    }
+	footer {
+		padding: 50px;
+	}
+
+	section.main-footer {
+		flex-direction: row;
+		text-align: left;
+		grid-template-columns: 30% 70%;
+	}
+
+	.company {
+		text-align: left;
+	}
+
+	.company .social-media ul {
+		justify-content: left;
+	}
+
+	.footer-links {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
+
+	section.copyright {
+		margin-top: 50px;
+	}
+
+	/* gambar partner*/
+	.gambar{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
 }
 
 /* Desktop Size Responsive */
 @media screen and (min-width: 1024px) {
-  /* Start Header */
-  header .search {
-      width: 100%;
-      height: 100%;
-      max-width: 500px;
-      display: inline;
-  }
-  /* End Header */
-  
-  /* ============================================== */
-  
-  /* Start Section Home Page */
-      #hero {
-        background-attachment: fixed;
-    }
-  
-  .col-lg-4 {
-        flex: 0 0 auto;
-        width: 33.33333333%;
-    }
 
-    .col-lg-6 {
-        flex: 0 0 auto;
-        width: 50%;
-    }
-    
-    .col-lg-8 {
-        flex: 0 0 auto;
-        width: 66.66666667%;
-    }
-    .container, .container-lg, .container-md, .container-sm {
-        max-width: 960px;
-    }
+	/* Start Header */
+	header .search {
+		width: 100%;
+		height: 100%;
+		max-width: 500px;
+		display: inline;
+	}
 
-    .px-lg-5 {
-        padding-right: 3rem!important;
-        padding-left: 3rem!important;
-    }
-  
-  .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 1140px;
-    }
-    .align-items-center {
-        align-items: center!important;
-    }
-    
-    .col-xl-4 {
-        flex: 0 0 auto;
-        width: 33.33333333%;
-    }
+	/* End Header */
 
-    .col-xl-5 {
-        flex: 0 0 auto;
-        width: 41.66666667%;
-        max-width: 1200px;
-    }
+	/* ============================================== */
 
-    .col-xl-7 {
-        flex: 0 0 auto;
-        width: 58.33333333%;
-    }
-  
-  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 1320px;
-    }
-/* End Section Home Page */
-  
-  /* Andika */
-  /* Booking PAGE */
-  /* Start Booking Page */
-  .booking-container {
+	/* Start Section Home Page */
+	#hero {
+		background-attachment: fixed;
+	}
+
+	#hero .container {
+		padding: 0 50px;
+	}
+
+	.col-lg-4 {
+		flex: 0 0 auto;
+		width: 33.33333333%;
+	}
+
+	.col-lg-6 {
+		flex: 0 0 auto;
+		width: 50%;
+	}
+
+	.col-lg-8 {
+		flex: 0 0 auto;
+		width: 66.66666667%;
+	}
+
+	.container, .container-lg, .container-md, .container-sm {
+		max-width: 960px;
+	}
+
+	.px-lg-5 {
+		padding-right: 3rem !important;
+		padding-left: 3rem !important;
+	}
+
+	.container, .container-lg, .container-md, .container-sm, .container-xl {
+		max-width: 1140px;
+	}
+
+	.align-items-center {
+		align-items: center !important;
+	}
+
+	.col-xl-4 {
+		flex: 0 0 auto;
+		width: 33.33333333%;
+	}
+
+	.col-xl-5 {
+		flex: 0 0 auto;
+		width: 41.66666667%;
+		max-width: 1200px;
+	}
+
+	.col-xl-7 {
+		flex: 0 0 auto;
+		width: 58.33333333%;
+	}
+
+	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+		max-width: 1320px;
+	}
+
+	/* End Section Home Page */
+
+	/* Andika */
+	/* Booking PAGE */
+	/* Start Booking Page */
+	.booking-container {
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		gap: 10px;
@@ -313,23 +346,27 @@
 	.selected-profile * {
 		margin: 8px 0;
 	}
-	.selected-profile > h1 {
+
+	.selected-profile>h1 {
 		font-size: 1.5em;
 	}
-	.selected-profile > h2 {
+
+	.selected-profile>h2 {
 		font-size: 1em;
 		color: #2b8e8e;
 	}
-	.selected-profile > div {
+
+	.selected-profile>div {
 		display: grid;
 		grid-template-columns: 1fr 3fr;
 	}
-	.selected-profile > div > img {
+
+	.selected-profile>div>img {
 		justify-self: center;
 		width: 100%;
 	}
 
-	.selected-profile > div > h1 {
+	.selected-profile>div>h1 {
 		font-size: 1.2em;
 		align-self: center;
 		margin: 0 10px;
@@ -345,7 +382,7 @@
 		padding: 5px 0;
 	}
 
-	.selected-profile > div.button {
+	.selected-profile>div.button {
 		margin-top: 20px;
 		width: 100%;
 		background-color: #dcf4f4;
@@ -353,7 +390,7 @@
 		justify-content: space-evenly;
 	}
 
-	.selected-profile > div.button > button {
+	.selected-profile>div.button>button {
 		width: 40%;
 		background-color: #2b8e8e;
 		color: white;
@@ -364,12 +401,13 @@
 		cursor: pointer;
 	}
 
-	.selected-profile > div.button > button:hover {
+	.selected-profile>div.button>button:hover {
 		background-color: #279595;
 	}
-  /* End Booking Page */
-  
-  /* Transaction */
+
+	/* End Booking Page */
+
+	/* Transaction */
 	.transaction-container {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
@@ -485,6 +523,7 @@
 
 		display: flex;
 	}
+
 	.detail-container div.rating div {
 		margin-right: 30px;
 	}
@@ -522,12 +561,14 @@
 		grid-column-start: 1;
 		grid-column-end: 4;
 	}
+
 	div.e-wallet form input,
 	div.virtual-account form input,
 	div.credit-card form input {
 		width: 20px;
 		justify-self: center;
 	}
+
 	.payment-container div form label {
 		align-self: center;
 	}
@@ -539,12 +580,13 @@
 	.label.payment {
 		font-weight: bold;
 	}
-  
-  /* ============================================== */
-  
-  /* Start Footer */
-  .footer-links .link {
-      justify-content: center;
-  }
-  /* End Footer */
+
+	/* ============================================== */
+
+	/* Start Footer */
+	.footer-links .link {
+		justify-content: center;
+	}
+
+	/* End Footer */
 }
