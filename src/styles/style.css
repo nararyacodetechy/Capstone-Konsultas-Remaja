@@ -120,6 +120,21 @@ header .user-account {
   overflow: hidden;
 }
 
+.user-account form .logout-user {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  min-width: 80px;
+  height: 35px;
+  border-radius: 8px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.user-account form .logout-user:hover {
+  background-color: var(--shadow-color);
+}
+
 button.menu-bar {
   background-color: transparent;
   border: none;
@@ -1170,7 +1185,7 @@ section.detail-consultant {
   text-align: center;
 }
 
-.experience-rates .object{
+.experience-rates .object {
   display: flex;
   flex-direction: column;
   gap: 5px;

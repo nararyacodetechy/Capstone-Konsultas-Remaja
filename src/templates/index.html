@@ -30,6 +30,9 @@
                     <h4 class="user name">Hanifa Asra Silmi Monalisa</h4>
                     <h5 class="user email">hanifasrasilmi@gmail.com</h5>
                 </div>
+                <form action="http://localhost:3000/logout?_method=DELETE" method="POST">
+                    <button type="submit" class="logout-user">Log Out</button>
+                </form>
             </div>
             <button class="menu-bar"
                 onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
@@ -61,10 +64,10 @@
 
 
 
-            
+
             <h1>Mari Konsultasi Bersama Kami</h1>
             <h2>Posyandu Remaja demi generasi bangsa!</h2>
-            <a href="#about" class="btn-get-started scrollto">Login</a>
+            <!-- <a href="http://localhost:3000/login" class="btn-get-started scrollto">Login</a> -->
         </div>
     </section><!-- End Hero -->
 
