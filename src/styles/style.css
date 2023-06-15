@@ -798,8 +798,9 @@ section {
 }
 
 .gambar img {
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
+  object-fit: contain;
 }
 
 /* Start Section Autentication Register Page and Login Page */
