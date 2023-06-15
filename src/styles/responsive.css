@@ -157,6 +157,8 @@
 
 	.container, .container-sm {
 		max-width: 540px;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 	.align-items-center {
@@ -193,6 +195,13 @@
 
 	section.copyright {
 		margin-top: 50px;
+	}
+
+	/* gambar partner*/
+	.gambar {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 	}
 }
 
