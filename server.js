@@ -85,7 +85,7 @@ app.post('/register', checkNotAuthenticated, async (req, res) => {
     res.redirect('/register');
   }
 });
-console.log(users);
+// console.log(users);
 
 app.delete('/logout', (req, res) => {
   req.logOut((err) => {
