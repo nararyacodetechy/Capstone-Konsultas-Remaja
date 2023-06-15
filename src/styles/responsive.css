@@ -198,7 +198,7 @@
 	}
 
 	/* gambar partner*/
-	.gambar{
+	.gambar {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;

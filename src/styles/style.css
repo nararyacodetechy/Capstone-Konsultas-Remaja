@@ -800,6 +800,7 @@ section {
 .gambar img {
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 /* Start Section Autentication Register Page and Login Page */
@@ -1166,7 +1167,7 @@ section.detail-consultant {
   text-align: center;
 }
 
-.experience-rates .object{
+.experience-rates .object {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -1673,6 +1674,7 @@ section.main-footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  padding: 0;
 }
 
 .company {
