@@ -207,8 +207,8 @@
 
   <div class="authentication">
     <div class="container">
-      <form action="/register" method="POST"
-        onsubmit="showLoadingNotice(); showSuccessAlert(); redirectToLogin(); return false;">
+      <form action="/register" method="POST" onsubmit="showLoadingNotice(); showSuccessAlert();">
+        <!-- <form action="/register" method="POST"> -->
         <h3>Daftar</h3>
         <div class="input">
           <label for="name">Name</label>
@@ -253,11 +253,11 @@
       successAlert.style.display = 'block';
     }
 
-    function redirectToLogin() {
-      setTimeout(function () {
-        window.location.href = "/login";
-      }, 3000); // Delay 5000 ms (5 detik) sebelum mengarahkan ke halaman /login
-    }
+    // function redirectToLogin() {
+    //   setTimeout(function () {
+    //     window.location.href = "/login";
+    //   }, 3000); // Delay 5000 ms (5 detik) sebelum mengarahkan ke halaman /login
+    // }
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
