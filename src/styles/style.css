@@ -424,8 +424,8 @@ section {
   border-radius: 50%;
   display: block;
   position: absolute;
-  left: calc(50% - 47px);
-  top: calc(50% - 47px);
+  left: calc(26% - 51px);
+  top: calc(72% - 55px);
   overflow: hidden;
 }
 
