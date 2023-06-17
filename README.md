@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/nararyacodetechy/Capstone-Konsultasi-Remaja">
-    <img src="src/public/favicon.png" alt="Logo" width="100" height="100">
+    <img src="" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">YoungMinds</h3>
