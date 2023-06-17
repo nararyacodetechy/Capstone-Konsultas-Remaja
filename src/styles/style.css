@@ -202,50 +202,88 @@ main {
 }
 
 /* Hero */
-#hero {
-	width: 100%;
-	height: 90vh;
-	background: url("../../dist/images/home-page/hero/hero-bg.jpg") top center;
-	background-size: cover;
-	margin-bottom: -200px;
-}
-
-#hero .container {
+section.hero {
+	margin: 0;
+	padding: 0;
+	margin-bottom: -30vh;
+	height: 100vh;
+	z-index: 1;
 	position: relative;
 }
 
-#hero h1 {
-	margin: 0;
-	font-size: 48px;
-	font-weight: 700;
-	line-height: 56px;
-	text-transform: uppercase;
-	color: #393939;
+.hero::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--main-color);
+	opacity: 0.3;
+	z-index: 2;
 }
 
-#hero h2 {
-	color: #393939;
-	margin: 10px 0 0 0;
+.hero .content {
+	position: absolute;
+	z-index: 3;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.hero .content .information {
+	margin-top: -50px;
+}
+
+.hero .content .information h1 {
 	font-size: 24px;
+	color: var(--secondary-color);
+	font-weight: 700;
 }
 
-#hero .btn-get-started {
-	font-family: "Raleway", sans-serif;
-	text-transform: uppercase;
-	font-weight: 500;
-	font-size: 14px;
-	letter-spacing: 1px;
-	display: inline-block;
-	padding: 12px 35px;
-	margin-top: 30px;
-	border-radius: 50px;
-	transition: 0.5s;
-	color: #fff;
-	background: #2b8e8e;
+.hero .content a {
+	padding: 10px 35px;
+	background-color: var(--main-color);
+	color: white;
+	border-radius: 8px;
+	width: fit-content;
 }
 
-#hero .btn-get-started:hover {
-	background: #393939;
+.hero-banner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.hero-banner {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+}
+
+.hero-banner img {
+	background-attachment: fixed;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	object-fit: cover;
+	object-position: top;
+}
+
+.hero-banner img.active {
+	opacity: 1;
 }
 
 .container,
@@ -260,6 +298,11 @@ main {
 	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
+}
+
+.why-us {
+	z-index: 3;
+	position: relative;
 }
 
 .why-us .content {
@@ -286,6 +329,7 @@ main {
 	color: #fff;
 	border-radius: 50px;
 	transition: all ease-in-out 0.4s;
+	z-index: 3;
 }
 
 .why-us .content .more-btn i {
@@ -991,6 +1035,8 @@ section.consultants {
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
+	object-fit: cover;
+	object-position: top;
 }
 
 .content-card .description {
@@ -1935,49 +1981,49 @@ section.articles {
 /* Style None Page */
 
 section.none-page {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  padding: 0;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding: 0;
 }
 
 .container.none-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 }
 
 .container.none-page img {
-  width: 500px;
-  height: 400px;
+	width: 650px;
+	height: 400px;
 }
 
 .container.none-page .description-none-found {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .container.none-page .description-none-found h3 {
-  font-size: 16px;
-  color: #393939;
-  font-style: oblique;
+	font-size: 16px;
+	color: #393939;
+	font-style: oblique;
 }
 
 .container.none-page .description-none-found a {
-  background-color: var(--main-color);
-  padding: 10px 15px;
-  width: fit-content;
-  border-radius: 8px;
-  color: white;
-  margin: 20px 0;
+	background-color: var(--main-color);
+	padding: 10px 15px;
+	width: fit-content;
+	border-radius: 8px;
+	color: white;
+	margin: 20px 0;
 }
 
 .container.none-page .description-none-found a:hover {
-  background-color: var(--shadow-color);
+	background-color: var(--shadow-color);
 }
 
 /* Style None Page */

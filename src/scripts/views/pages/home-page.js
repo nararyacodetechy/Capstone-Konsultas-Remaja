@@ -2,13 +2,31 @@ const HomePage = {
   async render() {
     return `
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center">
-        <div class="container">            
-            <h1>Mari Konsultasi Bersama Kami</h1>
-            <h2>Posyandu Remaja demi generasi bangsa!</h2>
+    <section class="hero">
+        <div class="content">
+            <div class="information">
+                <h1>Mari Konsultasi Bersama Kami</h1>
+                <h1>Posyandu Remaja demi generasi bangsa!</h1>
+            </div>
             <a href="http://localhost:3000/login" class="btn-get-started scrollto">Login</a>
         </div>
-    </section><!-- End Hero -->
+        <div class="hero-banner" id="hero">
+            <img
+                src="https://img.freepik.com/free-photo/young-girls-sharing-with-notes_23-2147656360.jpg?w=996&t=st=1687043251~exp=1687043851~hmac=bf9d01418b2736750b410eb83d0f5c04bf460539e2465a4749ef241ed8770f92"
+                        alt="Hero 1"
+                        class="active"
+                    />
+            <img
+                src="https://img.freepik.com/free-photo/woman-with-classmates-enjoying-studies_23-2147655981.jpg?size=626&ext=jpg&ga=GA1.2.1659838085.1656204107&semt=ais"
+                alt="Hero 2"
+            />
+            <img
+                src="https://img.freepik.com/free-photo/girl-listening-classmates_23-2147655966.jpg?w=996&t=st=1687042948~exp=1687043548~hmac=392bd9bae90ec5389c40916b229a0417858810d1163fdb4927e597a6730d60cb"
+                alt="Hero 3"
+            />
+        </div>
+    </section>
+    <!-- ======= Hero Section ======= -->
     
     <section id="why-us" class="why-us">
         <div class="container">
@@ -383,6 +401,18 @@ const HomePage = {
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
+    function animateBanner() {
+      const bannerImages = document.querySelectorAll('#hero img');
+      let currentIndex = 0;
+
+      setInterval(() => {
+        bannerImages[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % bannerImages.length;
+        bannerImages[currentIndex].classList.add('active');
+      }, 5000);
+    }
+
+    animateBanner();
   },
 };
 

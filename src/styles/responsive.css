@@ -235,12 +235,17 @@
 	/* ============================================== */
 
 	/* Start Section Home Page */
-	#hero {
-		background-attachment: fixed;
+	section.hero {
+		margin-bottom: -30vh;
+		height: 90vh;
 	}
 
-	#hero .container {
-		padding: 0 50px;
+	.hero .content {
+		padding: 50px;
+	}
+
+	.hero .content .information h1 {
+		font-size: 32px;
 	}
 
 	.col-lg-4 {
