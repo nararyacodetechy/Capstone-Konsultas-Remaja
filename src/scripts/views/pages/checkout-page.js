@@ -1,6 +1,6 @@
 const CheckoutPage = {
 	async render() {
-		return `
+	return `
 
         <div class="grid-container">
             <div class="countdown-container">

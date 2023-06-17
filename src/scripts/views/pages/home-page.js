@@ -339,7 +339,35 @@ const HomePage = {
         </div>
     </section>
 
-    <section>
+    <section class="ProfilTeam">
+    <div class="container">
+        <h1>Profil Team</h1>
+    <div class="team-profile">
+    <div class="team-member">
+        <img src="./images/home-page/ProfilTeam/team1.png" alt="Member 1">
+        <h3>John Doe</h3>
+        <p>Web Developer</p>
+    </div>
+    <div class="team-member">
+        <img src="./images/home-page/ProfilTeam/team1.png"" alt="Member 2">
+        <h3>Jane Smith</h3>
+        <p>UI/UX Designer</p>
+    </div>
+    <div class="team-member">
+        <img src="./images/home-page/ProfilTeam/team1.png"" alt="Member 3">
+        <h3>David Johnson</h3>
+        <p>Full Stack Developer</p>
+    </div>
+    <div class="team-member">
+        <img src="./images/home-page/ProfilTeam/team1.png"" alt="Member 3">
+        <h3>David Johnson</h3>
+        <p>Full Stack Developer</p>
+    </div>
+</div>
+      </div>
+    </section>
+
+    <section class="supportby">
         <h1 class="judul">Bekerja sama dengan <span class="highlight">kami</span></h1>
         <p class="paragraf"><span class="highlight">YoungMinds</span> menyediakan layanan edukasi dan konsultasi seputar masalah kesehatan mental kamu.</p>
         <div class="gambar">
