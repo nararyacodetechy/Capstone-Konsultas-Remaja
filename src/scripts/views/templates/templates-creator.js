@@ -1,3 +1,7 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable comma-dangle */
+/* eslint-disable indent */
 const createCardConsultantsTemplate = (consultant) => `
     <div class="card-consultant">
                     <div class="content-card">
@@ -38,13 +42,13 @@ const createBookingConsultantTemplate = (consultant) => `
                 <div>
                     <form>
                     ${consultant.readySchedule
-    .map(
-      (ready) => `
+                      .map(
+                        (ready) => `
                     <input type="radio" value="['${ready.date}','${ready.time}']" id="${ready.date}-${ready.time}">
                     <label for="${ready.date}-${ready.time}">${ready.date} ${ready.time}</label>
-                    `,
-    )
-    .join('')}
+                    `
+                      )
+                      .join('')}
                     </form>
                 </div>
         </div>
@@ -190,8 +194,24 @@ const createCheckoutConsultantTemplate = (consultant) => `
             </div>
         </div>
 `;
+
+const createCardArticleTemplate = (article) => `
+    <a href="${article.url}" class="list-articles">
+        <img src="${article.image}">
+        <div class="information">
+            <h3>${article.title}</h3>
+            <p class="category">${article.category}</p>
+            <p class="description">${article.description}</p>
+            <div class="writer">
+                <p>${article.createdAt}</p> |
+                <p>${article.writer}</p>
+            </div>
+        </div>
+    </a>
+`;
 export {
   createCardConsultantsTemplate,
   createBookingConsultantTemplate,
   createCheckoutConsultantTemplate,
+  createCardArticleTemplate,
 };
