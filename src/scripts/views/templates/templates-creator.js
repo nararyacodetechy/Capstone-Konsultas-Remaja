@@ -38,13 +38,13 @@ const createBookingConsultantTemplate = (consultant) => `
                 <div>
                     <form>
                     ${consultant.readySchedule
-                      .map(
-                        (ready) => `
+    .map(
+      (ready) => `
                     <input type="radio" value="['${ready.date}','${ready.time}']" id="${ready.date}-${ready.time}">
                     <label for="${ready.date}-${ready.time}">${ready.date} ${ready.time}</label>
-                    `
-                      )
-                      .join('')}
+                    `,
+    )
+    .join('')}
                     </form>
                 </div>
         </div>
