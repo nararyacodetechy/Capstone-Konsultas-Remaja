@@ -1768,6 +1768,99 @@ section.copyright {
 /* ================================================== */
 
 
+/* ============================ */
+/* profil Team */
+.ProfilTeam {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 6px;
+  text-align: center;
+  color: #279595;
+}
+
+.team-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  width: 300px;
+  text-align: center;
+  margin: 10px;
+}
+
+.team-member img {
+  width: 200px;
+  height: 300px;
+  border-radius: 10%;
+}
+
+/* about page */
+
+.about-logo h2{
+  text-align: center;
+  padding-bottom: 30px;
+  color: #2B8E8E;
+  font-size: 40px;
+}
+
+.about-logo img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutPage .icon-box {
+  text-align: center;
+  border: 10px solid #d5e1ed;
+  transition: all ease-in-out 0.3s;
+  margin-top: 50px;
+}
+
+.aboutPage .about-text .indent{
+  text-indent: 30px;
+}
+
+.aboutPage .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.aboutPage .icon-box h4 a {
+  color: #2c4964;
+}
+
+.aboutPage .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.aboutPage .icon-box:hover {
+  background: #2B8E8E;
+  border-color: #2B8E8E;
+}
+
+.aboutPage .icon-box:hover .icon {
+  background: #fff;
+}
+
+.aboutPage .icon-box:hover .icon i {
+  color: #2B8E8E;
+}
+
+.aboutPage .icon-box:hover .icon::before {
+  background: #3291e6;
+}
+
+.aboutPage .icon-box:hover h4 a,
+.aboutPage .icon-box:hover p {
+  color: #fff;
+}
+
 /* Style Card List Articles */
 
 section.articles {
@@ -1837,3 +1930,4 @@ section.articles {
 }
 
 /* Style Card List Articles */
+
