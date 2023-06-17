@@ -6,10 +6,9 @@ import UrlParser from "../../routes/url-parser";
 const BookingPage = {
 	async render() {
 		return `
-    <div id="consultant-booking"></div>
-    
+        <div id="consultant-booking"></div>
     `;
-	},
+  },
 
 	async afterRender() {
 		const url = UrlParser.parseActiveUrlWithoutCombiner();

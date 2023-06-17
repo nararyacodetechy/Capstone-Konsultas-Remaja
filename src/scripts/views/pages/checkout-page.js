@@ -7,7 +7,7 @@ const CheckoutPage = {
 		return `
         <div id="consultant-checkout"></div>
     `;
-	},
+  },
 
 	async afterRender() {
 		const url = UrlParser.parseActiveUrlWithoutCombiner();
