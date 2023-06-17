@@ -439,8 +439,8 @@ section {
   border-radius: 50%;
   display: block;
   position: absolute;
-  left: calc(50% - 47px);
-  top: calc(50% - 47px);
+  left: calc(26% - 51px);
+  top: calc(72% - 55px);
   overflow: hidden;
 }
 
@@ -644,7 +644,6 @@ section {
 }
 
 .testimonials .testimonial-item {
-  box-sizing: content-box;
   min-height: 200px;
   box-shadow: 0px 2px 12px rgba(44, 73, 100, 0.08);
   position: relative;
@@ -813,9 +812,9 @@ section {
 }
 
 .gambar img {
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Start Section Autentication Register Page and Login Page */
@@ -1392,7 +1391,7 @@ h1.lable-booking {
   grid-column-start: 1;
   grid-column-end: 3;
 
-  padding: 0px 20px;
+  padding: 0px 50px;
   background-color: #ffffff;
 }
 
