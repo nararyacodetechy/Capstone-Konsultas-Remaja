@@ -376,7 +376,7 @@
 		font-size: 1.5em;
 	}
 
-	.selected-profile>h2 {
+	.selected-profile h2 {
 		font-size: 1em;
 		color: #2b8e8e;
 	}
