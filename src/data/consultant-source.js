@@ -12,6 +12,12 @@ class ConsultantSource {
     const responseJson = await response.json();
     return responseJson;
   }
+
+  static async listArticles() {
+    const response = await fetch(API_ENDPOINT.ARTICLES);
+    const responseJson = await response.json();
+    return responseJson;
+  }
 }
 
 export default ConsultantSource;
