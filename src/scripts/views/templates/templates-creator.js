@@ -23,7 +23,7 @@ const createCardConsultantsTemplate = (consultant) => `
                     <div class="action-card">
                         <h5>RP${consultant.price}</h5>
                         <div class="button">
-                            <a href="" class="detail">Detail</a>
+                            <a href="#/detail-consultant-page" class="detail">Detail</a>
                             <a href="" class="schedule">Schedule</a>
                         </div>
                     </div>
@@ -37,10 +37,14 @@ const createBookingConsultantTemplate = (consultant) => `
                 <h2>Pilih Jadwal konsultasi</h2>
                 <div>
                     <form>
-                    ${consultant.readySchedule.map((ready) => `
+                    ${consultant.readySchedule
+                      .map(
+                        (ready) => `
                     <input type="radio" value="['${ready.date}','${ready.time}']" id="${ready.date}-${ready.time}">
                     <label for="${ready.date}-${ready.time}">${ready.date} ${ready.time}</label>
-                    `).join('')}
+                    `
+                      )
+                      .join('')}
                     </form>
                 </div>
         </div>
@@ -186,7 +190,8 @@ const createCheckoutConsultantTemplate = (consultant) => `
             </div>
         </div>
 `;
-export { 
-    createCardConsultantsTemplate, 
-    createBookingConsultantTemplate, 
-    createCheckoutConsultantTemplate };
+export {
+  createCardConsultantsTemplate,
+  createBookingConsultantTemplate,
+  createCheckoutConsultantTemplate,
+};
