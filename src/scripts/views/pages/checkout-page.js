@@ -109,21 +109,11 @@ const CheckoutPage = {
                         telah menyetujui <span>Syarat & Ketentuan YoungMinds</span></p>
                     </div>
                     <div class="continue-button">
-                        <button>Lanjutkan</button>
+                        <button>Bayar</button>
                     </div>
-                    
                 </div>
             </div>
-            
-                
-            
-        </div>
-
-
-        
-
-        
-        
+        </div>      
     `;
   },
 
