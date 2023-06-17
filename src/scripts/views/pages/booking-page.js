@@ -1,6 +1,6 @@
 const BookingPage = {
-	async render() {
-		return `
+  async render() {
+    return `
     <h1 class="lable-booking">Booking</h1>
     <section class="booking-container">
         <div class="booking">
@@ -40,17 +40,17 @@ const BookingPage = {
             <div class="price">Rp150.000</div>
             <div class="button">
             <button>Detail</button>
-            <button>Lanjutkan</button>
+            <button><a href="/#/checkout-page" style="color:white">Lanjutkan</a></button>
             </div>
         </div>
     </section>
     
     `;
-	},
+  },
 
-	async afterRender() {
-		// Fungsi ini akan dipanggil setelah render()
-	}
+  async afterRender() {
+    // Fungsi ini akan dipanggil setelah render()
+  },
 };
 
 export default BookingPage;

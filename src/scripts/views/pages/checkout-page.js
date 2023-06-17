@@ -1,6 +1,6 @@
 const CheckoutPage = {
-	async render() {
-		return `
+  async render() {
+    return `
 
         <div class="grid-container">
             <div class="countdown-container">
@@ -125,11 +125,11 @@ const CheckoutPage = {
         
         
     `;
-	},
+  },
 
-	async afterRender() {
-		// Fungsi ini akan dipanggil setelah render()
-	}
+  async afterRender() {
+    // Fungsi ini akan dipanggil setelah render()
+  },
 };
 
 export default CheckoutPage;
