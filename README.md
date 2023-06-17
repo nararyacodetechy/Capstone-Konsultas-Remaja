@@ -78,6 +78,10 @@ In order to run this project, it is necessary that the requirements must be met 
    ```sh
    npm run start-dev
    ```
+5. Run Server
+   ```sh
+   npm run start-server
+   ```
 
 ### Alternative Solution
 
