@@ -9,7 +9,7 @@ const routes = {
   '/': HomePage, // default page
   '/home-page': HomePage,
   '/list-consultant-page': ListConsultantPage,
-  '/detail-consultant-page': DetailConsultantPage,
+  '/detail-consultant-page/:id': DetailConsultantPage,
   '/booking-page/:id': BookingPage,
   '/checkout-page/:id': CheckoutPage,
   '/article-page': ArticlePage,

@@ -25,13 +25,94 @@ const createCardConsultantsTemplate = (consultant) => `
                         </div>
                     </div>
                     <div class="action-card">
-                        <h5>RP${consultant.price}</h5>
+                        <h5>RP${consultant.price}.000</h5>
                         <div class="button">
-                            <a href="#/detail-consultant-page" class="detail">Detail</a>
-                            <a href="" class="schedule">Schedule</a>
+                            <a href="/#/detail-consultant-page/${consultant.id}" class="detail">Detail</a>
+                            <a href="/#/booking-page/${consultant.id}" class="schedule">Schedule</a>
                         </div>
                     </div>
                 </div>
+`;
+
+const createDetailConsultantTemplate = (consultant) => `
+    <section class="detail-consultant">
+        <div class="main-title">
+          <label for="category-consultant">Dokter Psikologi</label>
+        </div>
+        <div class="container detail-consultant">
+          <div class="detail-main">
+            <div class="detail-card cards">
+              <div class="detail-profile">
+                <img src="https://static.sehatq.com/cdn-cgi/image/format=auto,width=1080,quality=90/telemed/profile/20210804141201">
+                <div class="information-detail">
+                  <h5>${consultant.name}</h5>
+                  <p>${consultant.specialist}</p>
+                  <span>Rp${consultant.price}.000</span>
+                </div>
+              </div>
+              <div class="notice">
+                <div class="icon-notice">
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
+                <p>Dokter belum bisa melayani konsultasi. Silahkan pilih jadwal lain untuk chat dengan dokter</p>
+              </div>
+            </div>
+            <div class="cards card-information">
+              <h5>Tentang Konsultan</h5>
+              <table>
+                <tr>
+                  <th>No STR.</th>
+                  <td>${consultant.noSTR}</td>
+                </tr>
+                <tr>
+                  <th>Alumni</th>
+                  <td>${consultant.alumni}</td>
+                </tr>
+                <tr>
+                  <th>Tempat Praktik</th>
+                  <td>${consultant.practicePlace}</td>
+                </tr>
+                <tr>
+                  <th>Spesialisasi</th>
+                  <td>
+                    <p>Hanifa Asra Silmi, M.Psi, Psikolog merupakan seorang psikolog. Beliau merupakan lulusan S1 Psikologi Universitas Indonesia. Beliau melanjutkan S2 Magister Profesi Psikologi Pendidikan Universitas Indonesia. Saat ini beliau berpraktik di Insight Psikologi di Jakarta Timur.</p>
+                    <p>Hanifa Asra Silmi, M.Psi, Psikolog fokus menangani tumbuh kembang anak dan remaja. Beliau juga berpengalaman dalam dan mendampingi orangtua berkaitan dengan parenting skill.</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="navigation-side">
+            <div class="experience-rates cards">
+              <div class="object">
+                <i class="fa-solid fa-business-time"></i>
+                <b>Pengalaman</b>
+                <p>${consultant.experience} Tahun</p>
+              </div>
+              <div class="object">
+                <i class="fa-solid fa-star"></i>
+                <b>Rating <span>(Ulasan)</span></b>
+                <p>${consultant.star}<span>(7)</span></p>
+              </div>
+            </div>
+            <div class="schedule-side cards">
+              <h5>Jadwal Terjadwal</h5>
+              <div class="list-schedule">
+              ${consultant.readySchedule.map((ready) => `
+              <div class="schedule">
+                  <p>${ready.date}</p>
+                  <p>${ready.time}</p>
+                </div>`).join('')}
+                <div class="schedule">
+                  <p>Sabtu, 27 Mei 2023</p>
+                  <p>09.00 - 09.30 A.M. WIB</p>
+                </div>
+              </div>
+            </div>
+            <a href="/#/booking-page/${consultant.id}" class="cards button-schedule">Make Schedule</a>
+          </div>
+        </div>
+      </section>
 `;
 
 const createBookingConsultantTemplate = (consultant) => `
@@ -41,6 +122,13 @@ const createBookingConsultantTemplate = (consultant) => `
                 <h2>Pilih Jadwal konsultasi</h2>
                 <div>
                     <form>
+                      <select>${consultant.readySchedule.map((ready) => `
+                              <option value="['${ready.date}','${ready.time}']"><p>${ready.date}</p>
+                              <p>${ready.time}</p></option>
+                          `).join('')}
+
+                      </select>
+=======
                     ${consultant.readySchedule
                       .map(
                         (ready) => `
@@ -70,10 +158,10 @@ const createBookingConsultantTemplate = (consultant) => `
                                     <b>${consultant.experience} tahun</b>
                                 </div>
                             </div>
-            <div class="price">RP${consultant.price}</div>
+            <div class="price">RP${consultant.price}.000</div>
             <div class="button">
-            <button>Detail</button>
-            <button>Lanjutkan</button>
+            <button><a href="/#/detail-consultant-page/${consultant.id}">Detail</a></button>
+            <button><a href="/#/checkout-page/${consultant.id}">Lanjutkan</a></button>
             </div>
         </div>
     </section>
@@ -93,16 +181,22 @@ const createCheckoutConsultantTemplate = (consultant) => `
 
             <div class="transaction-container">
                 <div class="detail-container">
-                    <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />    
+                    <img src="${consultant.avatar}" alt="${consultant.name}" />    
                     <h1>Profile</h1>
-                    <p class="specialist">Insight Psikologi</p>
+                    <p class="specialist">${consultant.specialist}</p>
                     <div class="rating">
-                        <div class="rating-star">*</div>
-                        <div class="rating-experience">#</div>
-                    </div>
-                    <p class="price">Rp350.000</p>
+                                <div class="rates">
+                                    <span>⭐</span>
+                                    <b>${consultant.star}</b>
+                                </div>
+                                <div class="experience">
+                                    <i class="fa-solid fa-business-time"></i>
+                                    <b>${consultant.experience} tahun</b>
+                                </div>
+                            </div>
+                    <p class="price">Rp${consultant.star}.000</p>
                     <div class="white button">
-                        <button>Detail</button>
+                        <a href="/#/detail-consultant-page/${consultant.id}"><button>Detail</button></a>
                     </div>
                 </div>
 
@@ -173,14 +267,14 @@ const createCheckoutConsultantTemplate = (consultant) => `
                     <div class="line-solid-1"></div>
                     <div class="price-count">
                         <p class="left">Total Harga Produk</p>
-                        <p class="right">Rp350.000</p>
+                        <p class="right">Rp${consultant.price}.000</p>
                         <p class="left">Diskon</p>
                         <p class="right">-Rp50.000</p>
                     </div>
                     <div class="line dash"></div>
                     <div class="price-sum">
                         <p>Total Tagihan</p>
-                        <p>Rp350.000</p>
+                        <p>Rp${consultant.price}.000</p>
                     </div>
                     <div class="terms-conditions">
                         <p>Dengan melanjutkan transaksi ini, maka saya 
@@ -194,7 +288,7 @@ const createCheckoutConsultantTemplate = (consultant) => `
             </div>
         </div>
 `;
-
+    
 const createCardArticleTemplate = (article) => `
     <a href="${article.url}" class="list-articles">
         <img src="${article.image}">
@@ -209,8 +303,10 @@ const createCardArticleTemplate = (article) => `
         </div>
     </a>
 `;
+
 export {
   createCardConsultantsTemplate,
+  createDetailConsultantTemplate,
   createBookingConsultantTemplate,
   createCheckoutConsultantTemplate,
   createCardArticleTemplate,

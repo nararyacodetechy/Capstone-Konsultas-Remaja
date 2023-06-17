@@ -72,6 +72,10 @@
 		font-size: 1em;
 	}
 
+	.selected-profile > div > img {
+		justify-self: center;
+		width: 80%;
+	}
 	/* ============================================== */
 
 	/* Start Footer */
@@ -81,7 +85,6 @@
 	}
 
 	/* End Footer */
-
 }
 
 /* Tablet Size Responsive */
@@ -159,7 +162,8 @@
 
 	/* End Detail Page  */
 
-	.container, .container-sm {
+	.container,
+	.container-sm {
 		max-width: 540px;
 		margin-right: auto;
 		margin-left: auto;
@@ -169,6 +173,10 @@
 		align-items: center !important;
 	}
 
+	.selected-profile > div > img {
+		justify-self: center;
+		width: 100px;
+	}
 	/* End Main */
 
 	/* ============================================== */
@@ -211,7 +219,6 @@
 
 /* Desktop Size Responsive */
 @media screen and (min-width: 1024px) {
-
 	/* Start Header */
 	header .search {
 		width: 100%;
@@ -248,7 +255,10 @@
 		width: 66.66666667%;
 	}
 
-	.container, .container-lg, .container-md, .container-sm {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm {
 		max-width: 960px;
 	}
 
@@ -257,7 +267,11 @@
 		padding-left: 3rem !important;
 	}
 
-	.container, .container-lg, .container-md, .container-sm, .container-xl {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl {
 		max-width: 1140px;
 	}
 
@@ -281,7 +295,12 @@
 		width: 58.33333333%;
 	}
 
-	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
 		max-width: 1320px;
 	}
 
@@ -350,26 +369,26 @@
 		margin: 8px 0;
 	}
 
-	.selected-profile>h1 {
+	.selected-profile > h1 {
 		font-size: 1.5em;
 	}
 
-	.selected-profile>h2 {
+	.selected-profile > h2 {
 		font-size: 1em;
 		color: #2b8e8e;
 	}
 
-	.selected-profile>div {
+	.selected-profile > div {
 		display: grid;
 		grid-template-columns: 1fr 3fr;
 	}
 
-	.selected-profile>div>img {
+	.selected-profile > div > img {
 		justify-self: center;
 		width: 100%;
 	}
 
-	.selected-profile>div>h1 {
+	.selected-profile > div > h1 {
 		font-size: 1.2em;
 		align-self: center;
 		margin: 0 10px;
@@ -385,7 +404,7 @@
 		padding: 5px 0;
 	}
 
-	.selected-profile>div.button {
+	.selected-profile > div.button {
 		margin-top: 20px;
 		width: 100%;
 		background-color: #dcf4f4;
@@ -393,7 +412,7 @@
 		justify-content: space-evenly;
 	}
 
-	.selected-profile>div.button>button {
+	.selected-profile > div.button > button {
 		width: 40%;
 		background-color: #2b8e8e;
 		color: white;
@@ -404,7 +423,7 @@
 		cursor: pointer;
 	}
 
-	.selected-profile>div.button>button:hover {
+	.selected-profile > div.button > button:hover {
 		background-color: #279595;
 	}
 
