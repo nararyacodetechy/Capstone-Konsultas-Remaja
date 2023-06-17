@@ -1,3 +1,6 @@
+import ConsultantSource from '../../../data/consultant-source';
+import {createCardConsultantsTemplate} from '../templates/templates-creator';
+
 const ListConsultantPage = {
   async render() {
     return `
@@ -11,188 +14,19 @@ const ListConsultantPage = {
                     <option>Mental</option>
                 </select>
             </div>
-            <div class="list-consultant">
-                <div class="card-consultant">
-                    <div class="content-card">
-                        <div class="profile">
-                            <img src="https://static.sehatq.com/cdn-cgi/image/format=auto,width=1080,quality=90/telemed/profile/20210804141201">
-                        </div>
-                        <div class="description">
-                            <h5>Hanifa Asra Silmi M.Psi, Psikolog</h5>
-                            <p>Psikologi</p>
-                            <b>Insight Psikologi</b>
-                            <div class="rate-experience">
-                                <div class="rates">
-                                    <span>⭐</span>
-                                    <b>5 (7)</b>
-                                </div>
-                                <div class="experience">
-                                    <i class="fa-solid fa-business-time"></i>
-                                    <b>2 tahun</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="action-card">
-                        <h5>RP. 150.000</h5>
-                        <div class="button">
-                            <a href="#/detail-consultant-page" class="detail">Detail</a>
-                            <a href="" class="schedule">Schedule</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-consultant">
-                    <div class="content-card">
-                        <div class="profile">
-                            <img src="https://static.sehatq.com/cdn-cgi/image/format=auto,width=1080,quality=90/telemed/profile/20210804141201">
-                        </div>
-                        <div class="description">
-                            <h5>Hanifa Asra Silmi M.Psi, Psikolog</h5>
-                            <p>Psikologi</p>
-                            <b>Insight Psikologi</b>
-                            <div class="rate-experience">
-                                <div class="rates">
-                                    <span>⭐</span>
-                                    <b>5 (7)</b>
-                                </div>
-                                <div class="experience">
-                                    <i class="fa-solid fa-business-time"></i>
-                                    <b>2 tahun</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="action-card">
-                        <h5>RP. 150.000</h5>
-                        <div class="button">
-                            <a href="" class="detail">Detail</a>
-                            <a href="" class="schedule">Schedule</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-consultant">
-                    <div class="content-card">
-                        <div class="profile">
-                            <img src="https://static.sehatq.com/cdn-cgi/image/format=auto,width=1080,quality=90/telemed/profile/20210804141201">
-                        </div>
-                        <div class="description">
-                            <h5>Hanifa Asra Silmi M.Psi, Psikolog</h5>
-                            <p>Psikologi</p>
-                            <b>Insight Psikologi</b>
-                            <div class="rate-experience">
-                                <div class="rates">
-                                    <span>⭐</span>
-                                    <b>5 (7)</b>
-                                </div>
-                                <div class="experience">
-                                    <i class="fa-solid fa-business-time"></i>
-                                    <b>2 tahun</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="action-card">
-                        <h5>RP. 150.000</h5>
-                        <div class="button">
-                            <a href="" class="detail">Detail</a>
-                            <a href="" class="schedule">Schedule</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-consultant">
-                    <div class="content-card">
-                        <div class="profile">
-                            <img src="https://static.sehatq.com/cdn-cgi/image/format=auto,width=1080,quality=90/telemed/profile/20210804141201">
-                        </div>
-                        <div class="description">
-                            <h5>Hanifa Asra Silmi M.Psi, Psikolog</h5>
-                            <p>Psikologi</p>
-                            <b>Insight Psikologi</b>
-                            <div class="rate-experience">
-                                <div class="rates">
-                                    <span>⭐</span>
-                                    <b>5 (7)</b>
-                                </div>
-                                <div class="experience">
-                                    <i class="fa-solid fa-business-time"></i>
-                                    <b>2 tahun</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="action-card">
-                        <h5>RP. 150.000</h5>
-                        <div class="button">
-                            <a href="" class="detail">Detail</a>
-                            <a href="" class="schedule">Schedule</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-consultant">
-                    <div class="content-card">
-                        <div class="profile">
-                            <img src="https://static.sehatq.com/cdn-cgi/image/format=auto,width=1080,quality=90/telemed/profile/20210804141201">
-                        </div>
-                        <div class="description">
-                            <h5>Hanifa Asra Silmi M.Psi, Psikolog</h5>
-                            <p>Psikologi</p>
-                            <b>Insight Psikologi</b>
-                            <div class="rate-experience">
-                                <div class="rates">
-                                    <span>⭐</span>
-                                    <b>5 (7)</b>
-                                </div>
-                                <div class="experience">
-                                    <i class="fa-solid fa-business-time"></i>
-                                    <b>2 tahun</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="action-card">
-                        <h5>RP. 150.000</h5>
-                        <div class="button">
-                            <a href="" class="detail">Detail</a>
-                            <a href="" class="schedule">Schedule</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-consultant">
-                    <div class="content-card">
-                        <div class="profile">
-                            <img src="https://static.sehatq.com/cdn-cgi/image/format=auto,width=1080,quality=90/telemed/profile/20210804141201">
-                        </div>
-                        <div class="description">
-                            <h5>Hanifa Asra Silmi M.Psi, Psikolog</h5>
-                            <p>Psikologi</p>
-                            <b>Insight Psikologi</b>
-                            <div class="rate-experience">
-                                <div class="rates">
-                                    <span>⭐</span>
-                                    <b>5 (7)</b>
-                                </div>
-                                <div class="experience">
-                                    <i class="fa-solid fa-business-time"></i>
-                                    <b>2 tahun</b>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="action-card">
-                        <h5>RP. 150.000</h5>
-                        <div class="button">
-                            <a href="" class="detail">Detail</a>
-                            <a href="" class="schedule">Schedule</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="consultant-card" class="list-consultant"></div>
         </section>
       `;
   },
 
   async afterRender() {
     // After Render Here
+    const consultants = await ConsultantSource.listConsultants();
+    console.log(consultants);
+    const consultantsContainer = document.querySelector('#consultant-card');
+    consultants.forEach((consultant) => {
+      consultantsContainer.innerHTML += createCardConsultantsTemplate(consultant);
+    });
   },
 };
 
