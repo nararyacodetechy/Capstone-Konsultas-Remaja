@@ -4,6 +4,8 @@ import DetailConsultantPage from '../views/pages/detail-consultant-page';
 import BookingPage from '../views/pages/booking-page';
 import CheckoutPage from '../views/pages/checkout-page';
 import ArticlePage from '../views/pages/arcticle-page';
+import NonePage from '../views/pages/none-page';
+import AboutPage from '../views/pages/about-page';
 
 const routes = {
   '/': HomePage, // default page
@@ -13,6 +15,8 @@ const routes = {
   '/booking-page/:id': BookingPage,
   '/checkout-page/:id': CheckoutPage,
   '/article-page': ArticlePage,
+  '/about-page': AboutPage,
+  '/none-page': NonePage,
 };
 
 export default routes;

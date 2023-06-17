@@ -1823,3 +1823,53 @@ section.articles {
 
 
 /* Style Card List Articles */
+
+/* Style None Page */
+
+section.none-page {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 0;
+}
+
+.container.none-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container.none-page img {
+  width: 400px;
+  height: 400px;
+}
+
+.container.none-page .description-none-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container.none-page .description-none-found h3 {
+  font-size: 16px;
+  color: #393939;
+  font-style: oblique;
+}
+
+.container.none-page .description-none-found a {
+  background-color: var(--main-color);
+  padding: 10px 15px;
+  width: fit-content;
+  border-radius: 8px;
+  color: white;
+  margin: 20px 0;
+}
+
+.container.none-page .description-none-found a:hover {
+  background-color: var(--shadow-color);
+}
+
+/* Style None Page */
