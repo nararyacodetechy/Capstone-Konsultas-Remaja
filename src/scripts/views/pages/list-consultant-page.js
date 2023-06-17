@@ -1,5 +1,5 @@
 import ConsultantSource from '../../../data/consultant-source';
-import createCardConsultantsTemplate from '../templates/templates-creator';
+import {createCardConsultantsTemplate} from '../templates/templates-creator';
 
 const ListConsultantPage = {
   async render() {
@@ -22,6 +22,7 @@ const ListConsultantPage = {
   async afterRender() {
     // After Render Here
     const consultants = await ConsultantSource.listConsultants();
+    console.log(consultants);
     const consultantsContainer = document.querySelector('#consultant-card');
     consultants.forEach((consultant) => {
       consultantsContainer.innerHTML += createCardConsultantsTemplate(consultant);

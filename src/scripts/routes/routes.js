@@ -13,8 +13,8 @@ const routes = {
   '/login-page': LoginPage,
   '/list-consultant-page': ListConsultantPage,
   '/detail-consultant-page': DetailConsultantPage,
-  '/booking-page': BookingPage,
-	'/checkout-page': CheckoutPage
+  '/booking-page/:id': BookingPage,
+	'/checkout-page/:id': CheckoutPage
 };
 
 export default routes;

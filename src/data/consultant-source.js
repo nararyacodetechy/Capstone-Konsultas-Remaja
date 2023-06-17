@@ -10,7 +10,7 @@ class ConsultantSource {
   static async detailConsultant(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
     const responseJson = await response.json();
-    return responseJson.restaurant;
+    return responseJson;
   }
 }
 
