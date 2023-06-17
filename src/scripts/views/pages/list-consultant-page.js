@@ -1,5 +1,6 @@
+/* eslint-disable operator-linebreak */
 import ConsultantSource from '../../../data/consultant-source';
-import {createCardConsultantsTemplate} from '../templates/templates-creator';
+import { createCardConsultantsTemplate } from '../templates/templates-creator';
 
 const ListConsultantPage = {
   async render() {
@@ -25,7 +26,8 @@ const ListConsultantPage = {
     console.log(consultants);
     const consultantsContainer = document.querySelector('#consultant-card');
     consultants.forEach((consultant) => {
-      consultantsContainer.innerHTML += createCardConsultantsTemplate(consultant);
+      consultantsContainer.innerHTML +=
+        createCardConsultantsTemplate(consultant);
     });
   },
 };
