@@ -8,7 +8,10 @@ const HomePage = {
                 <h1>Mari Konsultasi Bersama Kami</h1>
                 <h1>Posyandu Remaja demi generasi bangsa!</h1>
             </div>
-            <a href="http://localhost:3000/login" class="btn-get-started scrollto">Login</a>
+            <div class="button">
+                <a class="login" href="http://localhost:3000/login" class="btn-get-started scrollto">Login</a>
+                <a class="register" href="http://localhost:3000/register" class="btn-get-started scrollto">Register</a>
+            </div>
         </div>
         <div class="hero-banner" id="hero">
             <img
