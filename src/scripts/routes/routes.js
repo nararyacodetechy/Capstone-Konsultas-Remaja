@@ -10,7 +10,7 @@ const routes = {
   '/list-consultant-page': ListConsultantPage,
   '/detail-consultant-page': DetailConsultantPage,
   '/booking-page/:id': BookingPage,
-	'/checkout-page/:id': CheckoutPage
+  '/checkout-page/:id': CheckoutPage,
 };
 
 export default routes;
