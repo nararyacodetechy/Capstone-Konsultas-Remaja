@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable comma-dangle */
 /* eslint-disable indent */
+
 const createCardConsultantsTemplate = (consultant) => `
     <div class="card-consultant">
                     <div class="content-card">
@@ -11,7 +12,7 @@ const createCardConsultantsTemplate = (consultant) => `
                         <div class="description">
                             <h5>${consultant.name}</h5>
                             <p>${consultant.specialist}</p>
-                            <b>${consultant.practicePlace}</b>
+                            <b class="practice">${consultant.practicePlace}</b>
                             <div class="rate-experience">
                                 <div class="rates">
                                     <span>⭐</span>
@@ -25,7 +26,7 @@ const createCardConsultantsTemplate = (consultant) => `
                         </div>
                     </div>
                     <div class="action-card">
-                        <h5>RP${consultant.price}.000</h5>
+                        <h5>${consultant.price}</h5>
                         <div class="button">
                             <a href="/#/detail-consultant-page/${consultant.id}" class="detail">Detail</a>
                             <a href="/#/booking-page/${consultant.id}" class="schedule">Schedule</a>
@@ -47,7 +48,7 @@ const createDetailConsultantTemplate = (consultant) => `
                 <div class="information-detail">
                   <h5>${consultant.name}</h5>
                   <p>${consultant.specialist}</p>
-                  <span>Rp${consultant.price}.000</span>
+                  <span>${consultant.price}</span>
                 </div>
               </div>
               <div class="notice">
@@ -98,18 +99,24 @@ const createDetailConsultantTemplate = (consultant) => `
             <div class="schedule-side cards">
               <h5>Jadwal Terjadwal</h5>
               <div class="list-schedule">
-              ${consultant.readySchedule.map((ready) => `
+              ${consultant.readySchedule
+                .map(
+                  (ready) => `
               <div class="schedule">
                   <p>${ready.date}</p>
                   <p>${ready.time}</p>
-                </div>`).join('')}
+                </div>`
+                )
+                .join('')}
                 <div class="schedule">
                   <p>Sabtu, 27 Mei 2023</p>
                   <p>09.00 - 09.30 A.M. WIB</p>
                 </div>
               </div>
             </div>
-            <a href="/#/booking-page/${consultant.id}" class="cards button-schedule">Make Schedule</a>
+            <a href="/#/booking-page/${
+              consultant.id
+            }" class="cards button-schedule">Make Schedule</a>
           </div>
         </div>
       </section>
@@ -122,21 +129,16 @@ const createBookingConsultantTemplate = (consultant) => `
                 <h2>Pilih Jadwal konsultasi</h2>
                 <div>
                     <form>
-                      <select>${consultant.readySchedule.map((ready) => `
+                      <select>${consultant.readySchedule
+                        .map(
+                          (ready) => `
                               <option value="['${ready.date}','${ready.time}']"><p>${ready.date}</p>
                               <p>${ready.time}</p></option>
-                          `).join('')}
+                          `
+                        )
+                        .join('')}
 
                       </select>
-=======
-                    ${consultant.readySchedule
-                      .map(
-                        (ready) => `
-                    <input type="radio" value="['${ready.date}','${ready.time}']" id="${ready.date}-${ready.time}">
-                    <label for="${ready.date}-${ready.time}">${ready.date} ${ready.time}</label>
-                    `
-                      )
-                      .join('')}
                     </form>
                 </div>
         </div>
@@ -158,10 +160,14 @@ const createBookingConsultantTemplate = (consultant) => `
                                     <b>${consultant.experience} tahun</b>
                                 </div>
                             </div>
-            <div class="price">RP${consultant.price}.000</div>
+            <div class="price">${consultant.price}</div>
             <div class="button">
-            <button><a href="/#/detail-consultant-page/${consultant.id}">Detail</a></button>
-            <button><a href="/#/checkout-page/${consultant.id}">Lanjutkan</a></button>
+              <button><a href="/#/detail-consultant-page/${
+                consultant.id
+              }">Detail</a></button>
+              <button><a href="/#/checkout-page/${
+                consultant.id
+              }">Lanjutkan</a></button>
             </div>
         </div>
     </section>
@@ -171,7 +177,7 @@ const createCheckoutConsultantTemplate = (consultant) => `
 <div class="grid-container">
             <div class="countdown-container">
                 <span>
-                    Batas waktu pembayaran! 00:01:59
+                    Batas waktu pembayaran! <span id="countdown">00:00:00</span>
                 </span>
             </div>
 
@@ -182,21 +188,23 @@ const createCheckoutConsultantTemplate = (consultant) => `
             <div class="transaction-container">
                 <div class="detail-container">
                     <img src="${consultant.avatar}" alt="${consultant.name}" />    
-                    <h1>Profile</h1>
-                    <p class="specialist">${consultant.specialist}</p>
-                    <div class="rating">
-                                <div class="rates">
-                                    <span>⭐</span>
-                                    <b>${consultant.star}</b>
-                                </div>
-                                <div class="experience">
-                                    <i class="fa-solid fa-business-time"></i>
-                                    <b>${consultant.experience} tahun</b>
-                                </div>
-                            </div>
-                    <p class="price">Rp${consultant.star}.000</p>
-                    <div class="white button">
-                        <a href="/#/detail-consultant-page/${consultant.id}"><button>Detail</button></a>
+                    <div class="information-detail-transaction">
+                      <h1>${consultant.name}</h1>
+                      <p class="specialist">${consultant.specialist}</p>
+                      <div class="rating">
+                          <div class="rates">
+                              <span>⭐</span>
+                              <b>${consultant.star}</b>
+                          </div>
+                          <div class="experience">
+                              <i class="fa-solid fa-business-time"></i>
+                              <b>${consultant.experience} tahun</b>
+                          </div>
+                      </div>
+                      <p class="price">${consultant.price}</p>
+                      <div class="white button">
+                          <a href="/#/detail-consultant-page/${consultant.id}"><button>Detail</button></a>
+                      </div>
                     </div>
                 </div>
 
@@ -267,7 +275,7 @@ const createCheckoutConsultantTemplate = (consultant) => `
                     <div class="line-solid-1"></div>
                     <div class="price-count">
                         <p class="left">Total Harga Produk</p>
-                        <p class="right">Rp${consultant.price}.000</p>
+                        <p class="right">${consultant.price}</p>
                         <p class="left">Diskon</p>
                         <p class="right">-Rp50.000</p>
                     </div>
@@ -288,7 +296,7 @@ const createCheckoutConsultantTemplate = (consultant) => `
             </div>
         </div>
 `;
-    
+
 const createCardArticleTemplate = (article) => `
     <a href="${article.url}" class="list-articles">
         <img src="${article.image}">
