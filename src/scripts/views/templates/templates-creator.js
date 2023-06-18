@@ -116,7 +116,7 @@ const createDetailConsultantTemplate = (consultant) => `
             </div>
             <a href="/#/booking-page/${
               consultant.id
-            }" class="cards button-schedule">Make Schedule</a>
+            }" class="cards button-schedule">Buat Jadwal</a>
           </div>
         </div>
       </section>
@@ -288,7 +288,7 @@ const createCheckoutConsultantTemplate = (consultant) => `
                         telah menyetujui <span>Syarat & Ketentuan YoungMinds</span></p>
                     </div>
                     <div class="continue-button">
-                        <button>Lanjutkan</button>
+                        <button>Bayar</button>
                     </div>
                    
                     <div id="paymentSuccessPopup" class="popup">
