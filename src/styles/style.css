@@ -1585,24 +1585,26 @@ div.terms-conditions p span {
 }
 
 div.continue-button {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 div.continue-button button {
-	width: 95%;
-	background-color: var(--main-color);
-	color: white;
-	padding: 14px 20px;
-	margin: 0 10px 10px 10px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+  width: 95%;
+  background-color: var(--main-color);
+  color: white;
+  padding: 14px 20px;
+  margin: 0 10px 10px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-div.continue-button button {
-	background-color: #279595;
+div.continue-button button:hover {
+  background-color: var(--shadow-color);
 }
+
 
 /* line */
 
@@ -2077,3 +2079,60 @@ section.none-page {
 }
 
 /* Style None Page */
+
+/* popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(240, 249, 250);
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  text-align: center;
+  border: 2px solid #2b8e8e;
+}
+
+.popup h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.popup p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.price-details {
+  margin-top: 30px;
+}
+
+.price-count {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 2rem;
+}
+
+.left {
+  font-weight: bold;
+}
+
+.close-button {
+  background-color: #2b8e8e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: var(--shadow-color);
+}
+
