@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/nararyacodetechy/Capstone-Konsultasi-Remaja">
-    <img src="src/public/favicon.png" alt="Logo" width="100" height="100">
+    <img src="" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">YoungMinds</h3>
@@ -77,6 +77,10 @@ In order to run this project, it is necessary that the requirements must be met 
 4. Run Project
    ```sh
    npm run start-dev
+   ```
+5. Run Server
+   ```sh
+   npm run start-server
    ```
 
 ### Alternative Solution
