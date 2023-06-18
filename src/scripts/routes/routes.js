@@ -5,7 +5,7 @@ import BookingPage from '../views/pages/booking-page';
 import CheckoutPage from '../views/pages/checkout-page';
 import ArticlePage from '../views/pages/arcticle-page';
 import AboutPage from '../views/pages/about-page';
-// import KebijakanPrivasi from '../views/pages/kebijakan-privasi';
+import NonePage from '../views/pages/none-page';
 
 const routes = {
   '/': HomePage, // default page
@@ -16,7 +16,7 @@ const routes = {
   '/checkout-page/:id': CheckoutPage,
   '/article-page': ArticlePage,
   '/about-page': AboutPage,
-  // '/kebijakan-privasi':KebijakanPrivasi,
+  '/none-page': NonePage,
 };
 
 export default routes;

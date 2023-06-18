@@ -44,7 +44,7 @@ const createDetailConsultantTemplate = (consultant) => `
           <div class="detail-main">
             <div class="detail-card cards">
               <div class="detail-profile">
-                <img src="https://static.sehatq.com/cdn-cgi/image/format=auto,width=1080,quality=90/telemed/profile/20210804141201">
+                <img src="${consultant.avatar}">
                 <div class="information-detail">
                   <h5>${consultant.name}</h5>
                   <p>${consultant.specialist}</p>
@@ -123,7 +123,6 @@ const createDetailConsultantTemplate = (consultant) => `
 `;
 
 const createBookingConsultantTemplate = (consultant) => `
-<h1 class="lable-booking">Booking</h1>
     <section class="booking-container">
         <div class="booking">
                 <h2>Pilih Jadwal konsultasi</h2>
@@ -282,7 +281,7 @@ const createCheckoutConsultantTemplate = (consultant) => `
                     <div class="line dash"></div>
                     <div class="price-sum">
                         <p>Total Tagihan</p>
-                        <p>Rp${consultant.price}.000</p>
+                        <p>${consultant.price}</p>
                     </div>
                     <div class="terms-conditions">
                         <p>Dengan melanjutkan transaksi ini, maka saya 
