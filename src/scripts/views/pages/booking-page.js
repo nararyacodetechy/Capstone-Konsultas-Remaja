@@ -17,6 +17,8 @@ const BookingPage = {
         const ConsultantContainer = document.querySelector('#consultant-booking');
 
         ConsultantContainer.innerHTML = createBookingConsultantTemplate(consultant);
+
+		
 	}
 };
 

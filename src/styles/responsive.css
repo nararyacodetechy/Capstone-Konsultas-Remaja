@@ -8,15 +8,19 @@
 		grid-column-start: 1;
 		grid-column-end: 3;
 
-		padding: 0 20px;
+		padding: 0 50px;
 		background-color: #ffffff;
 	}
 
 	.payment-container div form {
 		display: grid;
 		grid-template-columns: 30px 1fr 1fr;
-	}
 
+		margin: 10px;
+	}
+	.payment-container div form img {
+		width: 50px;
+	}
 	div.e-wallet {
 		border-radius: 5px;
 		padding: 10px;
@@ -42,7 +46,7 @@
 		margin-bottom: 5px;
 	}
 
-	/* Reciept */
+	/* Reciept min 480px*/
 	.reciept-container {
 		display: grid;
 		grid-column-start: 1;
@@ -67,9 +71,29 @@
 		font-size: 1em;
 	}
 
-	.selected-profile > div > img {
+	.container-profile > img {
 		justify-self: center;
-		width: 80%;
+		width: 80px;
+		height: 80px;
+	}
+
+	.detail-container {
+		padding: 10px;
+	}
+	.detail-container img {
+		height: 100px;
+		width: 100px;
+	}
+
+	.detail-container div.button {
+		grid-column-start: 3;
+		justify-self: end;
+	}
+
+	/* Booking Page 480px */
+	.schedule-container {
+		display: flex;
+		flex-direction: row;
 	}
 	/* ============================================== */
 
@@ -149,13 +173,51 @@
 
 	/* End Section Autentication Register Page and Login Page */
 
-	/* Start Detail Page  */
+	/* Booking 640px */
+	.booking-container {
+		padding: 20px 50px;
+	}
+
+	.container-profile div.price {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		width: 100%;
+	}
+	.container-profile div.rating-star-experience {
+		justify-content: flex-start;
+	}
+	/* Start Detail Page 640px */
+	.container-profile {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+	}
+	.container-profile > h1:first-child {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		justify-self: flex-start;
+	}
+	.container-profile > img {
+		grid-column-start: 1;
+		grid-row-start: 2;
+		grid-row-end: 6;
+		justify-self: center;
+		align-self: center;
+		width: 100px;
+		height: 100px;
+	}
+	.container-profile h1 {
+		justify-self: flex-start;
+	}
+	.container-profile > h2 {
+		justify-self: flex-start;
+	}
+	.container-profile h2.practicePlace {
+		justify-self: flex-start;
+	}
 	section.detail-consultant {
 		background-color: var(--body-color);
 		padding: 50px;
 	}
-
-	/* End Detail Page  */
 
 	.container,
 	.container-sm {
@@ -168,10 +230,32 @@
 		align-items: center !important;
 	}
 
-	.selected-profile > div > img {
-		justify-self: center;
-		width: 100px;
+	.detail-container {
+		padding: 10px;
 	}
+
+	.detail-container img {
+		height: 100px;
+		width: 100px;
+		object-fit: cover;
+	}
+
+	/* End Detail */
+
+	/* Start Reciept */
+
+	.reciept-container {
+		padding: 20px;
+	}
+
+	.reciept-container p {
+		font-size: 0.8rem;
+	}
+
+	div.continue-button button {
+		width: 100%;
+	}
+	/* End Reciept */
 	/* End Main */
 
 	/* ============================================== */
@@ -302,7 +386,7 @@
 	/* End Section Home Page */
 
 	/* Andika */
-	/* Booking PAGE */
+	/* Booking PAGE min 1024px*/
 	/* Start Booking Page */
 	.booking-container {
 		display: grid;
@@ -310,7 +394,7 @@
 		gap: 10px;
 		border-radius: 5px;
 		background-color: #ffffff;
-		padding: 20px 40px;
+		padding: 20px 50px;
 	}
 
 	input[type="date"],
@@ -355,41 +439,42 @@
 
 	.selected-profile {
 		border-radius: 5px;
-		padding: 20px;
 		background-color: #ffffff;
 		box-shadow: 0px 0px 5px 3px #eee;
 	}
 
-	.selected-profile * {
+	.container-profile * {
 		margin: 8px 0;
 	}
 
-	.selected-profile > h1 {
-		font-size: 1.5em;
+	.container-profile > h1 {
+		font-size: 1rem;
+		text-align: start;
 	}
 
-	.selected-profile > h2 {
+	.container-profile > h2 {
 		font-size: 1em;
-		color: #2b8e8e;
+		text-align: start;
 	}
 
-	.selected-profile > div {
+	.container-profile > div {
 		display: grid;
 		grid-template-columns: 1fr 3fr;
 	}
 
-	.selected-profile > div > img {
+	.container-profile > img {
 		justify-self: center;
-		width: 100%;
+		width: 100px;
+		height: 100px;
 	}
 
-	.selected-profile > div > h1 {
+	.container-profile > div > h1 {
 		font-size: 1.2em;
 		align-self: center;
 		margin: 0 10px;
 	}
 
-	.selected-profile div.price {
+	.container-profile div.price {
 		border: solid 3px #2b8e8e;
 		border-radius: 5px;
 		font-size: 1.3em;
@@ -398,16 +483,19 @@
 		color: #2b8e8e;
 		padding: 5px 0;
 	}
+	.container-profile div.rating-star-experience {
+		grid-template-columns: auto 1fr;
+		align-items: center;
+	}
 
-	.selected-profile > div.button {
-		margin-top: 20px;
+	.container-action {
 		width: 100%;
 		background-color: #dcf4f4;
 		display: flex;
 		justify-content: space-evenly;
 	}
 
-	.selected-profile > div.button > button {
+	.container-action > button {
 		width: 40%;
 		background-color: #2b8e8e;
 		color: white;
@@ -418,13 +506,34 @@
 		cursor: pointer;
 	}
 
-	.selected-profile > div.button > button:hover {
+	.container-action > button:hover {
 		background-color: #279595;
 	}
 
+	/* Schedule 1024 */
+	.schedule-container {
+		display: flex;
+		flex-direction: row;
+	}
+	.schedule-box {
+	}
+
+	.schedule-box:hover {
+	}
+
+	.schedule-box.active {
+	}
+
+	.schedule-box.active p {
+	}
+
+	.schedule-box p {
+	}
+	.schedule-box p:first-child {
+	}
 	/* End Booking Page */
 
-	/* Transaction */
+	/* Transaction 1024px*/
 	.transaction-container {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
@@ -466,7 +575,7 @@
 		margin-bottom: 5px;
 	}
 
-	/* Reciept */
+	/* Reciept min 1024px*/
 	.reciept-container {
 		display: grid;
 		grid-column-start: 2;
@@ -475,11 +584,12 @@
 		grid-row-start: 1;
 		grid-row-end: 5;
 		border-radius: 5px;
-		margin-left: 10px;
+		margin-left: 20px;
 		margin-top: 0;
 		background-color: #ffffff;
 		box-shadow: 0px 0px 5px 3px #eee;
 
+		min-height: 50vh;
 		height: fit-content;
 	}
 
@@ -496,10 +606,13 @@
 		font-size: 1em;
 	}
 
-	/* detail */
+	/* detail min 1024px*/
 	.detail-container {
 		grid-column-start: 1;
 		grid-column-end: 2;
+
+		height: 30vh;
+		padding: 30px 20px;
 	}
 
 	.detail-container img {
@@ -510,12 +623,13 @@
 		grid-column-end: 2;
 		align-self: center;
 		justify-self: center;
-		height: 80%;
-		margin-right: 10px;
+		height: 130px;
+		width: 130px;
+		margin: 10px;
 	}
 
 	.detail-container h1 {
-		font-size: 1.5rem;
+		font-size: 1.1rem;
 	}
 
 	.detail-container p.specialist {
@@ -523,7 +637,7 @@
 		grid-column-end: 3;
 
 		color: #2b8e8e;
-		font-size: 0.9rem;
+		font-size: 1.1rem;
 	}
 
 	.detail-container p.price {
@@ -531,7 +645,7 @@
 		grid-column-end: 3;
 
 		color: #2b8e8e;
-		font-size: 1rem;
+		font-size: 1.3rem;
 	}
 
 	.detail-container div.rating {
@@ -539,20 +653,20 @@
 		grid-column-end: 3;
 
 		display: flex;
+		font-size: 1rem;
 	}
 
 	.detail-container div.rating div {
 		margin-right: 30px;
 	}
 
-	.detail-container div.button {
-		grid-column-start: 1;
-		grid-column-end: 3;
-
-		justify-self: end;
+	.detail-container div.button a button {
+		font-size: 1.1rem;
+		width: 80px;
+		position: relative;
+		bottom: -20px;
 	}
-
-	/* Payment */
+	/* Payment min 1024px*/
 	.payment-label {
 		grid-column-start: 1;
 		grid-column-end: 2;
@@ -578,6 +692,11 @@
 		grid-column-start: 1;
 		grid-column-end: 4;
 	}
+	.payment-container div form {
+		height: 300px;
+		font-size: 1rem;
+		margin: 20px;
+	}
 
 	div.e-wallet form input,
 	div.virtual-account form input,
@@ -588,10 +707,13 @@
 
 	.payment-container div form label {
 		align-self: center;
+		margin-left: 20px;
 	}
 
 	.payment-container div form img {
 		justify-self: end;
+		width: 60px;
+		max-height: 75px;
 	}
 
 	.label.payment {
