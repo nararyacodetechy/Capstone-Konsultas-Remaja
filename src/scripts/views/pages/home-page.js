@@ -6,7 +6,7 @@ const HomePage = {
         <div class="container">            
             <h1>Mari Konsultasi Bersama Kami</h1>
             <h2>Posyandu Remaja demi generasi bangsa!</h2>
-            <a href="#/register-page" class="btn-get-started scrollto">Login</a>
+            <a href="http://localhost:3000/login" class="btn-get-started scrollto">Login</a>
         </div>
     </section><!-- End Hero -->
     
