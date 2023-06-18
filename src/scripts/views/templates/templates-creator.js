@@ -290,7 +290,24 @@ const createCheckoutConsultantTemplate = (consultant) => `
                     <div class="continue-button">
                         <button>Lanjutkan</button>
                     </div>
-                    
+                   
+                    <div id="paymentSuccessPopup" class="popup">
+                    <div class="popup-content">
+                      <h3>Pembayaran Berhasil!</h3>
+                      <p>Terima kasih atas pembayaran Anda.</p>
+                      <div class="price-details">
+                        <div class="price-count">
+                          <p class="left">Total Harga Produk</p>
+                          <p class="right">${consultant.price}</p>
+                          <p class="left">Diskon</p>
+                          <p class="right">-Rp50.000</p>
+                        </div>
+                      </div>
+                      <button class="close-button">Kembali ke Halaman Utama</button>
+                    </div>
+                  </div>
+                  
+
                 </div>
             </div>
         </div>
