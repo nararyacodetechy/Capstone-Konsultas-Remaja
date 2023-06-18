@@ -38,7 +38,7 @@ a {
 }
 
 section {
-	padding: 60px 50px;
+	padding: 60px 20px;
 	overflow: hidden;
 }
 
@@ -46,6 +46,14 @@ section {
 	text-align: center;
 	padding-bottom: 30px;
 	color: #2b8e8e;
+}
+
+.section-title h1 {
+	font-size: 30px;
+}
+
+.section-title p {
+	font-size: 16px;
 }
 
 /* End Configuration Tag Style Design System */
@@ -77,7 +85,7 @@ header section.main-nav {
 
 header section.main-nav .logo>a {
 	color: var(--main-color);
-	font-size: 28px;
+	font-size: 20px;
 	font-weight: 700;
 }
 
@@ -247,7 +255,7 @@ section.hero {
 
 .hero .content .button {
 	display: flex;
-	gap: 30px;
+	gap: 10px;
 }
 
 .hero .content .button a {
@@ -326,9 +334,16 @@ section.hero {
 	margin-left: auto;
 }
 
-.why-us {
+.container {
+	margin: 0;
+	padding: 0;
+}
+
+section.why-us {
 	z-index: 3;
 	position: relative;
+	margin: 0;
+	width: 100%;
 }
 
 .why-us .content {
@@ -338,9 +353,17 @@ section.hero {
 	color: #fff;
 }
 
+.why-us .container .row {
+	gap: 20px;
+}
+
+.why-us .container .row .content h3 {
+	font-size: 30px;
+}
+
 .why-us .content h3 {
 	font-weight: 700;
-	font-size: 34px;
+	font-size: 20px;
 	margin-bottom: 30px;
 }
 
@@ -407,10 +430,6 @@ section.hero {
 	color: #848484;
 }
 
-section {
-	display: block;
-}
-
 .row {
 	--bs-gutter-x: 1.5rem;
 	--bs-gutter-y: 0;
@@ -435,7 +454,12 @@ section {
 --------------------------------------------------------------*/
 
 .container-fluid .row {
-	padding-left: 13px;
+	padding: 0 12px;
+}
+
+.container-fluid .row .content {
+	margin: 0;
+	padding: 0;
 }
 
 .about .icon-boxes h4 {
@@ -541,6 +565,10 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services .container .row {
+	gap: 20px;
+}
+
 .services .icon-box {
 	text-align: center;
 	border: 1px solid #d5e1ed;
@@ -651,6 +679,9 @@ section {
 	width: 100%;
 	scroll-snap-align: start;
 	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .testimonials .testimonial-item .testimonial-img {
@@ -758,22 +789,32 @@ section {
 	color: #dcf4f4;
 }
 
+.section-flow h1 {
+	font-size: 30px;
+}
+
+.section-flow p {
+	font-size: 16px;
+}
+
 .box {
 	background: linear-gradient(0deg, rgba(34, 35, 41, 0.08), rgba(34, 35, 41, 0.08)), #ffffff;
 	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
 	border-radius: 8px;
 	width: 100%;
-	height: 50vh;
-	/* padding: 20px; */
+	height: auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: center;
+	gap: 20px;
+	padding: 20px;
 }
 
 .box span {
 	font-size: 30px;
 	color: var(--main-color);
+	display: none;
 }
 
 .box-item {
@@ -791,8 +832,8 @@ section {
 }
 
 .box-item img {
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 }
 
 /* partner */
@@ -807,6 +848,7 @@ section.supportby {
 	color: #2b8e8e;
 	text-align: center;
 	margin-bottom: 30px;
+	font-size: 30px;
 }
 
 .paragraf {
@@ -814,6 +856,7 @@ section.supportby {
 	text-align: center;
 	max-width: 500px;
 	margin-bottom: 50px;
+	font-size: 16px;
 }
 
 .highlight {
@@ -973,8 +1016,9 @@ section.consultants {
 	font-weight: 600;
 	font-size: 16px;
 	max-width: 400px;
-	min-width: 300px;
+	min-width: 250px;
 	color: var(--shadow-color);
+	cursor: pointer;
 }
 
 section.consultants {
@@ -983,7 +1027,7 @@ section.consultants {
 
 .list-consultant {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 20px;
 	font-size: 14px;
 }
@@ -999,6 +1043,8 @@ section.consultants {
 
 .content-card {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	gap: 20px;
 	padding: 20px;
 }
@@ -1015,9 +1061,11 @@ section.consultants {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	align-items: center;
 }
 
 .content-card .description h5 {
+	text-align: center;
 	font-size: 16px;
 	font-weight: 800;
 	display: -webkit-box;
@@ -1050,9 +1098,11 @@ section.consultants {
 
 .action-card {
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px;
+	gap: 20px;
 	background-color: var(--secondary-color);
 	border-radius: 0 0 8px 8px;
 }
@@ -1098,10 +1148,12 @@ section.detail-consultant {
 
 .container.detail-consultant {
 	display: grid;
-	grid-template-columns: 70% 30%;
+	grid-template-columns: 100% 0%;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 20px;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 .detail-main {
@@ -1151,41 +1203,13 @@ section.detail-consultant {
 	font-weight: 800;
 }
 
-.card-information {
-	text-align: left;
-	line-height: 20px;
-}
-
-.card-information h5 {
-	font-size: 22px;
-	margin-bottom: 30px;
-	color: var(--shadow-color);
-}
-
-.card-information table tr {
-	grid-template-columns: 25% 75%;
-	display: grid;
-}
-
-.card-information table tr th {
-	margin-bottom: 15px;
-}
-
-.card-information table tr td {
-	margin-bottom: 15px;
-}
-
-.card-information table p {
-	margin-bottom: 8px;
-}
-
 .notice {
 	display: flex;
 	align-items: center;
 	gap: 10px;
 	background-color: var(--orange-color);
 	border-radius: 8px;
-	padding: 2px 10px;
+	padding: 5px 10px;
 }
 
 .notice .icon-notice {
@@ -1199,6 +1223,34 @@ section.detail-consultant {
 
 .notice p {
 	font-size: 12px;
+}
+
+.card-information {
+	text-align: left;
+	line-height: 20px;
+}
+
+.card-information h5 {
+	font-size: 22px;
+	margin-bottom: 30px;
+	color: var(--shadow-color);
+}
+
+.card-information table tr {
+	flex-direction: column;
+	display: flex;
+}
+
+.card-information table tr th {
+	margin-bottom: 15px;
+}
+
+.card-information table tr td {
+	margin-bottom: 15px;
+}
+
+.card-information table p {
+	margin-bottom: 8px;
 }
 
 .navigation-side {
@@ -1718,7 +1770,7 @@ footer {
 section.main-footer {
 	text-align: center;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: 30px;
 	padding: 0;
 }
@@ -1775,9 +1827,8 @@ section.main-footer {
 }
 
 section.copyright {
-	margin-top: 20px;
 	text-align: center;
-	margin: 0;
+	margin-top: 30px;
 	padding: 0;
 }
 
@@ -1798,8 +1849,12 @@ section.copyright {
 }
 
 .ProfilTeam .container h1 {
-	margin: 50px 0 80px 0;
 	font-size: 30px;
+}
+
+.ProfilTeam .container p {
+	margin-bottom: 80px;
+	font-size: 16px;
 }
 
 .team-profile {
@@ -1990,8 +2045,9 @@ section.none-page {
 }
 
 .container.none-page img {
-	width: 650px;
-	height: 400px;
+	margin-top: 50px;
+	width: 450px;
+	height: 300px;
 }
 
 .container.none-page .description-none-found {
@@ -2001,9 +2057,10 @@ section.none-page {
 }
 
 .container.none-page .description-none-found h3 {
-	font-size: 16px;
+	margin-top: 30px;
+	font-size: 18px;
+	font-weight: 700;
 	color: #393939;
-	font-style: oblique;
 }
 
 .container.none-page .description-none-found a {

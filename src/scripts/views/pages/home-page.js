@@ -91,7 +91,7 @@ const HomePage = {
                     class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
                 </div>
                 <div
-                    class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+                    class="content col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
                     <h3>Hai! salam kenal dari kami YoungMinds! Solusi bercerita buat kalian</h3>
                     <p>YoungMinds adalah layanan kesehatan mental online yang siap memberikan
                         konsultasi aman dan nyaman untuk kamu. Berawal dari visi untuk meningkatkan
@@ -141,7 +141,7 @@ const HomePage = {
         <div class="container">
 
             <div class="section-title">
-                <h2>Services</h2>
+                <h1>Services</h1>
                 <p>Apa masalah kamu?</p>
             </div>
 
@@ -238,7 +238,7 @@ const HomePage = {
 
 <section id="testimonials" class="testimonials">
     <div class="section-title">
-        <h2>ULASAN</h2>
+        <h1>Ulasan</h1>
         <p>Apa kata mereka?</p>
     </div>
     <div class="container">
@@ -322,6 +322,7 @@ const HomePage = {
     <section class="container-flow">
         <div class="section-flow">
             <h1>Alur Konsultasi</h1>
+            <p>Bagaimana cara melakukan konsultasi ?</p>
         </div>
         <div class="box">
             <div class="box-item">
@@ -349,6 +350,7 @@ const HomePage = {
     <section class="ProfilTeam">
     <div class="container">
         <h1>Our Team</h1>
+        <p>Kami bersinergi dengan tujuan yang sama</p>
         <div class="team-profile">
             <div class="team-member">
                 <img src="./images/home-page/team/raditya.jpg" alt="Member 1">
@@ -383,7 +385,6 @@ const HomePage = {
             <img src="./images/home-page/partner/posyandu.png" alt="Gambar 3">
         </div>
     </section>
-
 
     `;
   },

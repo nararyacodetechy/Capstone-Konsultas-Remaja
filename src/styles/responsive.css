@@ -5,6 +5,33 @@
 		padding: 60px 50px;
 	}
 
+	.list-consultant {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	}
+
+	.content-card {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.content-card .description {
+		align-items: start;
+	}
+
+	.content-card .description h5 {
+		text-align: left;
+	}
+
+	.action-card {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.container.detail-consultant {
+		grid-template-columns: 100% 0%;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
 	/* Transaction */
 	.transaction-container {
 		display: grid;
@@ -77,6 +104,10 @@
 		width: 80%;
 	}
 
+	.services .container .row {
+		gap: 0px;
+	}
+
 	/* ============================================== */
 
 	/* Start Footer */
@@ -100,6 +131,10 @@
 		display: flex;
 		align-items: center;
 		gap: 10px;
+	}
+
+	header section.main-nav .logo>a {
+		font-size: 28px;
 	}
 
 	header nav {
@@ -161,7 +196,16 @@
 		padding: 50px;
 	}
 
+	.card-information table tr {
+		grid-template-columns: 25% 75%;
+		display: grid;
+	}
+
 	/* End Detail Page  */
+
+	.why-us .container .row {
+		gap: 0px;
+	}
 
 	.container,
 	.container-sm {
@@ -177,6 +221,31 @@
 	.selected-profile>div>img {
 		justify-self: center;
 		width: 100px;
+	}
+
+	/* gambar partner*/
+	.gambar {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.testimonials .testimonial-item {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: center;
+		width: 100%;
+		padding: 20px;
+	}
+
+	.container-flow .box span {
+		display: flex;
+	}
+
+	.box-item img {
+		width: 100px;
+		height: 100px;
 	}
 
 	/* End Main */
@@ -201,6 +270,7 @@
 
 	.company .social-media ul {
 		justify-content: left;
+		margin-top: 10px;
 	}
 
 	.footer-links {
@@ -209,13 +279,6 @@
 
 	section.copyright {
 		margin-top: 50px;
-	}
-
-	/* gambar partner*/
-	.gambar {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
 	}
 }
 
@@ -244,8 +307,16 @@
 		padding: 50px;
 	}
 
+	.hero .content .button {
+		gap: 30px;
+	}
+
 	.hero .content .information h1 {
 		font-size: 32px;
+	}
+
+	.container.detail-consultant {
+		grid-template-columns: 70% 30%;
 	}
 
 	.col-lg-4 {
@@ -271,7 +342,6 @@
 	}
 
 	.px-lg-5 {
-		padding-right: 3rem !important;
 		padding-left: 3rem !important;
 	}
 
