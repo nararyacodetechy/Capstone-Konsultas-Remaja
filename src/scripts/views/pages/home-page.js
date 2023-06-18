@@ -359,9 +359,9 @@ const HomePage = {
                 <p>Web Developer</p>
             </div>
             <div class="team-member">
-                <img src="./images/home-page/team/team1.png"" alt="Member 2">
-                <a href="">Jane Smith</a>
-                <p>UI/UX Designer</p>
+                <img src="./images/home-page/team/razif.jpg" alt="Member 2">
+                <a href="linkedin.com/in/razif-ilham-932465267/">Razif Ilham Rosadi</a>
+                <p>Front-End Web Developer</p>
             </div>
             <div class="team-member">
                 <img src="./images/home-page/team/team1.png"" alt="Member 3">
