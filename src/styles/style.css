@@ -503,10 +503,11 @@ section {
 	font-size: 14px;
 }
 
-.about .video-box {
-	background: url("../../dist/images/home-page/about/group.png") center center no-repeat;
+.about .video-box img{
 	background-size: cover;
-	min-height: 500px;
+	object-fit: cover;
+	min-height: 200px;
+	max-width: 500px;
 }
 
 .py-5 {
