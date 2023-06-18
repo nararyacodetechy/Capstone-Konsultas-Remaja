@@ -15,7 +15,7 @@ const HomePage = {
         </div>
         <div class="hero-banner" id="hero">
             <img
-                src="https://img.freepik.com/free-photo/young-girls-sharing-with-notes_23-2147656360.jpg?w=996&t=st=1687043251~exp=1687043851~hmac=bf9d01418b2736750b410eb83d0f5c04bf460539e2465a4749ef241ed8770f92"
+                src="https://img.freepik.com/free-photo/young-girls-sharing-with-notes_23-2147656360.jpg?size=626&ext=jpg&ga=GA1.1.1659838085.1656204107&semt=ais"
                         alt="Hero 1"
                         class="active"
                     />
@@ -86,15 +86,10 @@ const HomePage = {
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
         <div class="container-fluid">
-
             <div class="row">
                 <div
                     class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
-                    <a
-                        href="https://www.youtube.com/watch?v=jDDaplaOz7Q"
-                        class="glightbox play-btn mb-4"></a>
                 </div>
-
                 <div
                     class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
                     <h3>Hai! salam kenal dari kami YoungMinds! Solusi bercerita buat kalian</h3>
@@ -330,61 +325,52 @@ const HomePage = {
         </div>
         <div class="box">
             <div class="box-item">
-                <img src="./images/home-page/flow/register.png" alt="Image 1">
-                <h2>Login</h2>
-            </div>
-            <div class="box-item">
-                <img src="./images/home-page/flow/login.png" alt="Image 2">
-                <h2>Register</h2>
-            </div>
-            <div class="box-item">
-                <img src="./images/home-page/flow/home.png" alt="Image 3">
-                <h2>Home</h2>
-            </div>
-            <div class="box-item">
                 <img src="./images/home-page/flow/layanan.png" alt="Image 4">
                 <h2>Cari Layanan</h2>
             </div>
+            <span>></span>
             <div class="box-item">
                 <img src="./images/home-page/flow/konsultan.png" alt="Image 5">
                 <h2>Pilih Konsultan</h2>
             </div>
-            <div class="box-item">
-                <img src="./images/home-page/flow/jadwal.png" alt="Image 6">
-                <h2>Buat Jadwal</h2>
-            </div>
+            <span>></span>
             <div class="box-item">
                 <img src="./images/home-page/flow/chat.png" alt="Image 7">
-                <h2>Chat WhatsApp</h2>
+                <h2>Buat Jadwal</h2>
+            </div>
+            <span>></span>
+            <div class="box-item">
+                <img src="./images/home-page/flow/jadwal.png" alt="Image 6">
+                <h2>Konsultasi</h2>
             </div>
         </div>
     </section>
 
     <section class="ProfilTeam">
     <div class="container">
-        <h1>Profil Team</h1>
-    <div class="team-profile">
-    <div class="team-member">
-        <img src="./images/home-page/ProfilTeam/team1.png" alt="Member 1">
-        <h3>John Doe</h3>
-        <p>Web Developer</p>
-    </div>
-    <div class="team-member">
-        <img src="./images/home-page/ProfilTeam/team1.png"" alt="Member 2">
-        <h3>Jane Smith</h3>
-        <p>UI/UX Designer</p>
-    </div>
-    <div class="team-member">
-        <img src="./images/home-page/ProfilTeam/team1.png"" alt="Member 3">
-        <h3>David Johnson</h3>
-        <p>Full Stack Developer</p>
-    </div>
-    <div class="team-member">
-        <img src="./images/home-page/ProfilTeam/team1.png"" alt="Member 3">
-        <h3>David Johnson</h3>
-        <p>Full Stack Developer</p>
-    </div>
-</div>
+        <h1>Our Team</h1>
+        <div class="team-profile">
+            <div class="team-member">
+                <img src="./images/home-page/team/raditya.jpg" alt="Member 1">
+                <a href="https://www.linkedin.com/in/bagus-nararya-nanda-raditya-785410252/">Raditya</a>
+                <p>Web Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/home-page/team/team1.png"" alt="Member 2">
+                <a href="">Jane Smith</a>
+                <p>UI/UX Designer</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/home-page/team/team1.png"" alt="Member 3">
+                <a href="">David Johnson</a>
+                <p>Full Stack Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/home-page/team/team1.png"" alt="Member 3">
+                <a href="">David Johnson</a>
+                <p>Full Stack Developer</p>
+            </div>
+        </div>
       </div>
     </section>
 
@@ -393,7 +379,7 @@ const HomePage = {
         <p class="paragraf"><span class="highlight">YoungMinds</span> menyediakan layanan edukasi dan konsultasi seputar masalah kesehatan mental kamu.</p>
         <div class="gambar">
             <img src="./images/home-page/partner/mbkm.png" alt="Gambar 1">
-            <img src="./images/home-page/partner/dicoding.png" alt="Gambar 2">
+            <img src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/1973487/1973487-1563248797755-7e69686001d3e.jpg" alt="Dicoding">
             <img src="./images/home-page/partner/posyandu.png" alt="Gambar 3">
         </div>
     </section>
