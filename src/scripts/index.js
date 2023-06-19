@@ -3,6 +3,8 @@ import 'regenerator-runtime';
 import '../styles/style.css';
 import '../styles/responsive.css';
 
+import './utils/bar-menu';
+
 import App from './views/app';
 
 const app = new App({
@@ -18,4 +20,3 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
 });
-
