@@ -1,3 +1,7 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable comma-dangle */
+/* eslint-disable indent */
 const createCardConsultantsTemplate = (consultant) => `
     <div class="card-consultant">
                     <div class="content-card">
@@ -28,6 +32,87 @@ const createCardConsultantsTemplate = (consultant) => `
                         </div>
                     </div>
                 </div>
+`;
+
+const createDetailConsultantTemplate = (consultant) => `
+    <section class="detail-consultant">
+        <div class="main-title">
+          <label for="category-consultant">Dokter Psikologi</label>
+        </div>
+        <div class="container detail-consultant">
+          <div class="detail-main">
+            <div class="detail-card cards">
+              <div class="detail-profile">
+                <img src="https://static.sehatq.com/cdn-cgi/image/format=auto,width=1080,quality=90/telemed/profile/20210804141201">
+                <div class="information-detail">
+                  <h5>${consultant.name}</h5>
+                  <p>${consultant.specialist}</p>
+                  <span>Rp${consultant.price}.000</span>
+                </div>
+              </div>
+              <div class="notice">
+                <div class="icon-notice">
+                  <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
+                <p>Dokter belum bisa melayani konsultasi. Silahkan pilih jadwal lain untuk chat dengan dokter</p>
+              </div>
+            </div>
+            <div class="cards card-information">
+              <h5>Tentang Konsultan</h5>
+              <table>
+                <tr>
+                  <th>No STR.</th>
+                  <td>${consultant.noSTR}</td>
+                </tr>
+                <tr>
+                  <th>Alumni</th>
+                  <td>${consultant.alumni}</td>
+                </tr>
+                <tr>
+                  <th>Tempat Praktik</th>
+                  <td>${consultant.practicePlace}</td>
+                </tr>
+                <tr>
+                  <th>Spesialisasi</th>
+                  <td>
+                    <p>Hanifa Asra Silmi, M.Psi, Psikolog merupakan seorang psikolog. Beliau merupakan lulusan S1 Psikologi Universitas Indonesia. Beliau melanjutkan S2 Magister Profesi Psikologi Pendidikan Universitas Indonesia. Saat ini beliau berpraktik di Insight Psikologi di Jakarta Timur.</p>
+                    <p>Hanifa Asra Silmi, M.Psi, Psikolog fokus menangani tumbuh kembang anak dan remaja. Beliau juga berpengalaman dalam dan mendampingi orangtua berkaitan dengan parenting skill.</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="navigation-side">
+            <div class="experience-rates cards">
+              <div class="object">
+                <i class="fa-solid fa-business-time"></i>
+                <b>Pengalaman</b>
+                <p>${consultant.experience} Tahun</p>
+              </div>
+              <div class="object">
+                <i class="fa-solid fa-star"></i>
+                <b>Rating <span>(Ulasan)</span></b>
+                <p>${consultant.star}<span>(7)</span></p>
+              </div>
+            </div>
+            <div class="schedule-side cards">
+              <h5>Jadwal Terjadwal</h5>
+              <div class="list-schedule">
+              ${consultant.readySchedule.map((ready) => `
+              <div class="schedule">
+                  <p>${ready.date}</p>
+                  <p>${ready.time}</p>
+                </div>`).join('')}
+                <div class="schedule">
+                  <p>Sabtu, 27 Mei 2023</p>
+                  <p>09.00 - 09.30 A.M. WIB</p>
+                </div>
+              </div>
+            </div>
+            <a href="/#/booking-page/${consultant.id}" class="cards button-schedule">Make Schedule</a>
+          </div>
+        </div>
+      </section>
 `;
 
 const createBookingConsultantTemplate = (consultant) => `
@@ -271,14 +356,14 @@ const createDetailConsultantTemplate = (consultant) => `
                 </div>`).join('')}
               </div>
             </div>
-            <a href="/#/booking-page/${consultant.id}" class="cards button-schedule">Make Schedule</a>
-          </div>
         </div>
-      </section>
+    </a>
 `;
-export { 
-    createCardConsultantsTemplate, 
-    createBookingConsultantTemplate, 
-    createCheckoutConsultantTemplate,
-    createDetailConsultantTemplate
+
+export {
+  createCardConsultantsTemplate,
+  createDetailConsultantTemplate,
+  createBookingConsultantTemplate,
+  createCheckoutConsultantTemplate,
+  createCardArticleTemplate,
 };
