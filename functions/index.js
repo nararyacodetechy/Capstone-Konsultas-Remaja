@@ -1,3 +1,15 @@
+/**
+ * Import function triggers from their respective submodules:
+ *
+ * const {onCall} = require("firebase-functions/v2/https");
+ * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
+ *
+ * See a full list of supported triggers at https://firebase.google.com/docs/functions
+ */
+
+// const { onRequest } = require('firebase-functions/v2/https');
+// const logger = require('firebase-functions/logger');
+
 /* eslint-disable comma-dangle */
 /* eslint-disable no-undef */
 /* eslint-disable no-use-before-define */
@@ -7,6 +19,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
+const functions = require('firebase-functions');
 const express = require('express');
 const path = require('path');
 
@@ -43,7 +56,6 @@ app.use(passport.session());
 app.use(methodOverride('_method'));
 
 app.get('/', checkAuthenticated, (req, res) => {
-  // res.redirect('https://youngmind.netlify.app/');
   res.redirect('https://youngminds-d6f24.web.app/');
 });
 
@@ -113,3 +125,5 @@ function checkNotAuthenticated(req, res, next) {
 }
 
 app.listen(3000);
+
+exports.helloworld = functions.https.onRequest(app);
