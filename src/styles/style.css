@@ -39,7 +39,7 @@ a {
 }
 
 section {
-	padding: 60px 20px;
+	padding: 60px 50px;
 	overflow: hidden;
 }
 
@@ -1381,13 +1381,6 @@ h1.lable-booking {
 	box-shadow: 0px 0px 5px 3px #eee;
 }
 
-.selected-profile {
-	display: grid;
-	border-radius: 5px;
-	background-color: #ffffff;
-	box-shadow: 0px 0px 5px 3px #eee;
-}
-
 .container-profile {
 	display: grid;
 	border-radius: 5px;
@@ -1462,7 +1455,7 @@ h1.lable-booking {
 	height: 70px;
 }
 
-.container-action > button {
+.container-action > a {
 	width: 40%;
 	background-color: var(--main-color);
 
@@ -1475,13 +1468,15 @@ h1.lable-booking {
 	height: 40px;
 	align-self: center;
 	min-width: fit-content;
+	text-align: center;
 }
-.container-action > button > a {
+.container-action > a {
 	color: white;
 }
-.container-action > button:hover {
+.container-action > a:hover {
 	background-color: #279595;
 }
+
 /* Schedule */
 .schedule-container {
 	display: flex;
@@ -1547,7 +1542,13 @@ h1.lable-booking {
 }
 
 .checkout-label {
-	padding: 20px;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+
+	padding: 20px 40px;
+	background-color: #ffffff;
 }
 
 /* transaksi */
@@ -1630,7 +1631,7 @@ div.credit-card {
 	width: 95%;
 	padding: 12px 10px;
 	margin: 10px;
-	border: 1px solid var(--main-color);
+	border: 4px solid var(--main-color);
 	border-radius: 4px;
 	box-sizing: border-box;
 	font-size: 1em;
@@ -1642,10 +1643,12 @@ div.credit-card {
 	font-size: 1.5rem;
 }
 
-.price-count {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+.price-count-reciept {
+	display: flex;
+	justify-content: space-between;
 	margin: 10px;
+	gap: 1rem;
+	flex: 2;
 }
 
 .price-count p.left {
@@ -1724,7 +1727,7 @@ div.continue-button button:hover {
 /* detail */
 .detail-container {
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: auto 2fr;
 
 	grid-column-start: 1;
 	grid-column-end: 3;
@@ -1746,9 +1749,14 @@ div.continue-button button:hover {
 }
 
 .detail-container img {
+	grid-row-start: 1;
+	grid-row-end: 5;
+
 	align-self: center;
 	justify-self: center;
-	height: 80%;
+	width: 80px;
+	height: 80px;
+	object-fit: contain;
 	margin-right: 10px;
 	border-radius: 50%;
 	object-position: top;
@@ -1759,18 +1767,26 @@ div.continue-button button:hover {
 }
 
 .detail-container p.specialist {
+	grid-column-start: 2;
+	grid-column-end: 3;
+
 	color: var(--main-color);
 	font-size: 0.8rem;
 }
 
 .detail-container p.price {
+	grid-column-start: 2;
+	grid-column-end: 3;
+
 	color: var(--main-color);
 	font-size: 0.8rem;
 }
 
 .detail-container div.rating {
+	grid-column-start: 2;
+	grid-column-end: 3;
+
 	display: flex;
-	margin-top: 15px;
 }
 .detail-container > div.rating > div > b {
 	font-size: 0.7rem;
@@ -1781,9 +1797,10 @@ div.continue-button button:hover {
 }
 
 .detail-container div.button {
-	width: 100%;
-	display: flex;
-	justify-content: center;
+	grid-column-start: 1;
+	grid-column-end: 3;
+
+	justify-self: end;
 }
 
 /* Payment */

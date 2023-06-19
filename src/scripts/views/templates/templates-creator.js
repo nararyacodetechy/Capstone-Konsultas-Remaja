@@ -157,8 +157,8 @@ const createBookingConsultantTemplate = (consultant) => `
         </div>
         
         <div class="container-action button">
-          <button><a href="/#/detail-consultant-page/${consultant.id}">Detail</a></button>
-          <button><a href="/#/checkout-page/${consultant.id}">Lanjutkan</a></button>
+          <a href="/#/detail-consultant-page/${consultant.id}">Detail</a>
+          <a href="/#/checkout-page/${consultant.id}">Lanjutkan</a>
         </div>
       </div>
     </section>
@@ -268,11 +268,17 @@ const createCheckoutConsultantTemplate = (consultant) => `
                     <div class="line-solid-2"></div>    
                     <h1>Ringkasan</h1>
                     <div class="line-solid-1"></div>
-                    <div class="price-count">
+                    <div class="price-count-reciept">
+                      <div class="price-count-column">
                         <p class="left">Total Harga Produk</p>
-                        <p class="right">${consultant.price}</p>
                         <p class="left">Diskon</p>
+                        
+                      </div>
+                      <div class="price-count-column">
+                        <p class="right">${consultant.price}</p>
                         <p class="right">-Rp50.000</p>
+                      </div>  
+                        
                     </div>
                     <div class="line dash"></div>
                     <div class="price-sum">
@@ -287,10 +293,27 @@ const createCheckoutConsultantTemplate = (consultant) => `
                         <button>Lanjutkan</button>
                     </div>
                     
+                    <div id="paymentSuccessPopup" class="popup">
+                    <div class="popup-content">
+                      <h3>Pembayaran Berhasil!</h3>
+                      <p>Terima kasih atas pembayaran Anda.</p>
+                      <div class="price-details">
+                        <div class="price-count">
+                          <p class="left">Total Harga Produk</p>
+                          <p class="right">${consultant.price}</p>
+                          <p class="left">Diskon</p>
+                          <p class="right">-Rp50.000</p>
+                        </div>
+                      </div>
+                      <button class="close-button">Kembali ke Halaman Utama</button>
+                    </div>
+                  </div>
+                  
                 </div>
             </div>
         </div>
 `;
+
     
 const createCardArticleTemplate = (article) => `
     <a href="${article.url}" class="list-articles">
