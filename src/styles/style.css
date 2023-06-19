@@ -84,7 +84,7 @@ header section.main-nav {
 	gap: 30px;
 }
 
-header section.main-nav .logo > a {
+header section.main-nav .logo>a {
 	color: var(--main-color);
 	font-size: 20px;
 	font-weight: 700;
@@ -154,6 +154,17 @@ button.menu-bar {
 	justify-content: center;
 	transition: 0.4s ease-in-out;
 }
+
+header nav.show {
+	display: flex;
+	background-color: var(--body-color);
+	color: var(--main-color);
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	height: 80vh;
+}
+
 
 .line {
 	fill: none;
@@ -441,7 +452,7 @@ section.why-us {
 	flex-wrap: wrap;
 }
 
-.row > * {
+.row>* {
 	flex-shrink: 0;
 	width: 100%;
 	max-width: 100%;
@@ -1391,16 +1402,18 @@ h1.lable-booking {
 .container-profile * {
 	margin: 8px 0;
 }
-.container-profile > h1:first-child {
+
+.container-profile>h1:first-child {
 	font-size: 1.5em;
 }
 
-.container-profile > h1 {
+.container-profile>h1 {
 	font-size: 1.2em;
 	justify-self: center;
 	text-align: center;
 }
-.container-profile > h2 {
+
+.container-profile>h2 {
 	font-size: 1em;
 	color: var(--main-color);
 	justify-self: center;
@@ -1413,13 +1426,13 @@ h1.lable-booking {
 	justify-self: center;
 }
 
-.container-profile > div {
+.container-profile>div {
 	display: flex;
 	flex-direction: row;
 	gap: 10%;
 }
 
-.container-profile > img {
+.container-profile>img {
 	justify-self: center;
 	width: 90px;
 	height: 90px;
@@ -1428,7 +1441,7 @@ h1.lable-booking {
 	object-position: top;
 }
 
-.container-profile > div > h1 {
+.container-profile>div>h1 {
 	font-size: 1.2em;
 	align-self: center;
 	margin: 0 10px;
@@ -1443,9 +1456,11 @@ h1.lable-booking {
 	color: var(--main-color);
 	padding: 5px 10px;
 }
+
 .container-profile div.rating-star-experience {
 	justify-content: center;
 }
+
 .container-action {
 	width: 100%;
 	background-color: var(--secondary-color);
@@ -1455,7 +1470,7 @@ h1.lable-booking {
 	height: 70px;
 }
 
-.container-action > a {
+.container-action>a {
 	width: 40%;
 	background-color: var(--main-color);
 
@@ -1470,10 +1485,12 @@ h1.lable-booking {
 	min-width: fit-content;
 	text-align: center;
 }
-.container-action > a {
+
+.container-action>a {
 	color: white;
 }
-.container-action > a:hover {
+
+.container-action>a:hover {
 	background-color: #279595;
 }
 
@@ -1484,6 +1501,7 @@ h1.lable-booking {
 	flex-direction: column;
 	margin-top: 20px;
 }
+
 .schedule-box {
 	padding: 10px 20px;
 	border: 1px solid var(--main-color);
@@ -1516,6 +1534,7 @@ h1.lable-booking {
 .schedule-box p {
 	color: var(--main-color);
 }
+
 .schedule-box p:first-child {
 	font-weight: 700;
 }
@@ -1575,6 +1594,7 @@ h1.lable-booking {
 	grid-template-columns: 30px 1fr 1fr;
 	height: calc(10vh);
 }
+
 .payment-container div form img {
 	width: 40px;
 	align-self: center;
@@ -1788,10 +1808,12 @@ div.continue-button button:hover {
 
 	display: flex;
 }
-.detail-container > div.rating > div > b {
+
+.detail-container>div.rating>div>b {
 	font-size: 0.7rem;
 }
-.detail-container > div.rating > div {
+
+.detail-container>div.rating>div {
 	margin-right: 15px;
 	font-size: 0.8;
 }

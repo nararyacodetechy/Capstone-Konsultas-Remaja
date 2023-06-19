@@ -34,7 +34,7 @@
                     <button type="submit" class="logout-user">Log Out</button>
                 </form>
             </div>
-            <button class="menu-bar"
+            <button class="menu-bar" id="menu-bar"
                 onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
                 aria-label="Main Menu">
                 <svg viewBox="0 0 100 100">
@@ -46,7 +46,7 @@
                 </svg>
             </button>
         </section>
-        <nav>
+        <nav id="mobile-menu">
             <li><a href="#/home-page">Beranda</a></li>
             <li><a href="#/list-consultant-page">Konsultan</a></li>
             <li><a href="#/article-page">Artikel</a></li>
