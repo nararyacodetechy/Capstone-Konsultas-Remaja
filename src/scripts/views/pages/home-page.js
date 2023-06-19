@@ -356,7 +356,7 @@ const HomePage = {
             <div class="team-member">
                 <img src="./images/home-page/team/raditya.jpg" alt="Member 1">
                 <a href="https://www.linkedin.com/in/bagus-nararya-nanda-raditya-785410252/">Raditya</a>
-                <p>Web Developer</p>
+                <p>Full Stack Web Developer</p>
             </div>
             <div class="team-member">
                 <img src="./images/home-page/team/razif.jpg" alt="Member 2">
@@ -364,9 +364,9 @@ const HomePage = {
                 <p>Front-End Web Developer</p>
             </div>
             <div class="team-member">
-                <img src="./images/home-page/team/team1.png"" alt="Member 3">
-                <a href="">David Johnson</a>
-                <p>Full Stack Developer</p>
+                <img src="./images/home-page/team/iqbal.jpg"" alt="Member 3">
+                <a href="">Iqbal</a>
+                <p>Front-End Web Developer</p>
             </div>
             <div class="team-member">
                 <img src="./images/home-page/team/team1.png"" alt="Member 3">
