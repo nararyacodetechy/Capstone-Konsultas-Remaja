@@ -1,8 +1,34 @@
 /* Mini Tablet Size Responsive */
 @media screen and (min-width: 480px) {
-
 	section {
 		padding: 60px 50px;
+	}
+
+	.list-consultant {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	}
+
+	.content-card {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.content-card .description {
+		align-items: start;
+	}
+
+	.content-card .description h5 {
+		text-align: left;
+	}
+
+	.action-card {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.container.detail-consultant {
+		grid-template-columns: 100% 0%;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	}
 
 	/* Transaction */
@@ -12,7 +38,7 @@
 
 		grid-column-start: 1;
 		grid-column-end: 3;
-
+		width: 100%;
 		padding: 0 50px;
 		background-color: #ffffff;
 	}
@@ -70,7 +96,7 @@
 		padding: 12px 20px;
 		margin: 12px;
 		display: inline-block;
-		border: 4px solid #2b8e8e;
+		border: 1px solid #2b8e8e;
 		border-radius: 4px;
 		box-sizing: border-box;
 		font-size: 1em;
@@ -80,25 +106,6 @@
 		justify-self: center;
 		width: 80px;
 		height: 80px;
-	}
-
-	.detail-container {
-		padding: 10px;
-	}
-	.detail-container img {
-		height: 100px;
-		width: 100px;
-	}
-
-	.detail-container div.button {
-		grid-column-start: 3;
-		justify-self: end;
-	}
-
-	/* Booking Page 480px */
-	.schedule-container {
-		display: flex;
-		flex-direction: row;
 	}
 	/* ============================================== */
 
@@ -123,6 +130,10 @@
 		display: flex;
 		align-items: center;
 		gap: 10px;
+	}
+
+	header section.main-nav .logo > a {
+		font-size: 28px;
 	}
 
 	header nav {
@@ -224,6 +235,8 @@
 		padding: 50px;
 	}
 
+	/* End Detail Page  */
+
 	.container,
 	.container-sm {
 		max-width: 540px;
@@ -235,12 +248,8 @@
 		align-items: center !important;
 	}
 
-	.detail-container {
-		padding: 10px;
-	}
-
-	.detail-container img {
-		height: 100px;
+	.selected-profile > div > img {
+		justify-self: center;
 		width: 100px;
 		object-fit: cover;
 	}
@@ -260,7 +269,6 @@
 	div.continue-button button {
 		width: 100%;
 	}
-	/* End Reciept */
 	/* End Main */
 
 	/* ============================================== */
@@ -283,6 +291,7 @@
 
 	.company .social-media ul {
 		justify-content: left;
+		margin-top: 10px;
 	}
 
 	.footer-links {
@@ -291,13 +300,6 @@
 
 	section.copyright {
 		margin-top: 50px;
-	}
-
-	/* gambar partner*/
-	.gambar {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
 	}
 }
 
@@ -316,12 +318,25 @@
 	/* ============================================== */
 
 	/* Start Section Home Page */
-	#hero {
-		background-attachment: fixed;
+	section.hero {
+		margin-bottom: -30vh;
+		height: 90vh;
 	}
 
-	#hero .container {
-		padding: 0 50px;
+	.hero .content {
+		padding: 50px;
+	}
+
+	.hero .content .button {
+		gap: 30px;
+	}
+
+	.hero .content .information h1 {
+		font-size: 32px;
+	}
+
+	.container.detail-consultant {
+		grid-template-columns: 70% 30%;
 	}
 
 	.col-lg-4 {
@@ -347,7 +362,6 @@
 	}
 
 	.px-lg-5 {
-		padding-right: 3rem !important;
 		padding-left: 3rem !important;
 	}
 
@@ -452,9 +466,8 @@
 		margin: 8px 0;
 	}
 
-	.container-profile > h1 {
-		font-size: 1rem;
-		text-align: start;
+	.selected-profile > h1 {
+		font-size: 1.5em;
 	}
 
 	.container-profile > h2 {
@@ -495,9 +508,8 @@
 
 	.container-action {
 		width: 100%;
-		background-color: #dcf4f4;
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-between;
 	}
 
 	.container-action > button {
@@ -605,7 +617,7 @@
 		padding: 12px 20px;
 		margin: 12px;
 		display: inline-block;
-		border: 4px solid #2b8e8e;
+		border: 1px solid #2b8e8e;
 		border-radius: 4px;
 		box-sizing: border-box;
 		font-size: 1em;
@@ -615,26 +627,21 @@
 	.detail-container {
 		grid-column-start: 1;
 		grid-column-end: 2;
-
-		height: 30vh;
-		padding: 30px 20px;
 	}
 
 	.detail-container img {
 		grid-row-start: 1;
 		grid-row-end: 5;
-
 		grid-column-start: 1;
 		grid-column-end: 2;
 		align-self: center;
 		justify-self: center;
-		height: 130px;
-		width: 130px;
-		margin: 10px;
+		height: 80%;
+		margin-right: 10px;
 	}
 
 	.detail-container h1 {
-		font-size: 1.1rem;
+		font-size: 1.5rem;
 	}
 
 	.detail-container p.specialist {

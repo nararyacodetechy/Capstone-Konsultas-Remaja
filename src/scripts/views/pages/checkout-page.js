@@ -17,6 +17,21 @@ const CheckoutPage = {
 
     ConsultantContainer.innerHTML =
       createCheckoutConsultantTemplate(consultant);
+
+    const continueButton = document.querySelector('.continue-button button');
+    const paymentSuccessPopup = document.getElementById('paymentSuccessPopup');
+
+    continueButton.addEventListener('click', () => {
+      paymentSuccessPopup.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    });
+
+    const backButton = paymentSuccessPopup.querySelector('button');
+    backButton.addEventListener('click', () => {
+      paymentSuccessPopup.style.display = 'none';
+      document.body.style.overflow = 'auto';
+      window.location.href = 'http://localhost:9000/#/home-page';
+    });
   },
 };
 

@@ -43,7 +43,7 @@ app.use(passport.session());
 app.use(methodOverride('_method'));
 
 app.get('/', checkAuthenticated, (req, res) => {
-  res.redirect('http://localhost:9000');
+  res.redirect('https://youngmind.netlify.app/');
 });
 
 app.use((req, res, next) => {

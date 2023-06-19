@@ -2,13 +2,34 @@ const HomePage = {
   async render() {
     return `
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center">
-        <div class="container">            
-            <h1>Mari Konsultasi Bersama Kami</h1>
-            <h2>Posyandu Remaja demi generasi bangsa!</h2>
-            <a href="http://localhost:3000/login" class="btn-get-started scrollto">Login</a>
+    <section class="hero">
+        <div class="content">
+            <div class="information">
+                <h1>Mari Konsultasi Bersama Kami</h1>
+                <h1>Posyandu Remaja demi generasi bangsa!</h1>
+            </div>
+            <div class="button">
+                <a class="login" href="http://localhost:3000/login" class="btn-get-started scrollto">Login</a>
+                <a class="register" href="http://localhost:3000/register" class="btn-get-started scrollto">Register</a>
+            </div>
         </div>
-    </section><!-- End Hero -->
+        <div class="hero-banner" id="hero">
+            <img
+                src="https://img.freepik.com/free-photo/young-girls-sharing-with-notes_23-2147656360.jpg?size=626&ext=jpg&ga=GA1.1.1659838085.1656204107&semt=ais"
+                        alt="Hero 1"
+                        class="active"
+                    />
+            <img
+                src="https://img.freepik.com/free-photo/woman-with-classmates-enjoying-studies_23-2147655981.jpg?size=626&ext=jpg&ga=GA1.2.1659838085.1656204107&semt=ais"
+                alt="Hero 2"
+            />
+            <img
+                src="https://img.freepik.com/free-photo/girl-listening-classmates_23-2147655966.jpg?w=996&t=st=1687042948~exp=1687043548~hmac=392bd9bae90ec5389c40916b229a0417858810d1163fdb4927e597a6730d60cb"
+                alt="Hero 3"
+            />
+        </div>
+    </section>
+    <!-- ======= Hero Section ======= -->
     
     <section id="why-us" class="why-us">
         <div class="container">
@@ -65,17 +86,13 @@ const HomePage = {
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
         <div class="container-fluid">
-
             <div class="row">
                 <div
                     class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
-                    <a
-                        href="https://www.youtube.com/watch?v=jDDaplaOz7Q"
-                        class="glightbox play-btn mb-4"></a>
+                    <img src="./images/home-page/about/group.png" alt="Group Image">
                 </div>
-
                 <div
-                    class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+                    class="content col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
                     <h3>Hai! salam kenal dari kami YoungMinds! Solusi bercerita buat kalian</h3>
                     <p>YoungMinds adalah layanan kesehatan mental online yang siap memberikan
                         konsultasi aman dan nyaman untuk kamu. Berawal dari visi untuk meningkatkan
@@ -125,7 +142,7 @@ const HomePage = {
         <div class="container">
 
             <div class="section-title">
-                <h2>Services</h2>
+                <h1>Services</h1>
                 <p>Apa masalah kamu?</p>
             </div>
 
@@ -222,7 +239,7 @@ const HomePage = {
 
 <section id="testimonials" class="testimonials">
     <div class="section-title">
-        <h2>ULASAN</h2>
+        <h1>Ulasan</h1>
         <p>Apa kata mereka?</p>
     </div>
     <div class="container">
@@ -306,55 +323,87 @@ const HomePage = {
     <section class="container-flow">
         <div class="section-flow">
             <h1>Alur Konsultasi</h1>
+            <p>Bagaimana cara melakukan konsultasi ?</p>
         </div>
         <div class="box">
-            <div class="box-item">
-                <img src="./images/home-page/flow/register.png" alt="Image 1">
-                <h2>Login</h2>
-            </div>
-            <div class="box-item">
-                <img src="./images/home-page/flow/login.png" alt="Image 2">
-                <h2>Register</h2>
-            </div>
-            <div class="box-item">
-                <img src="./images/home-page/flow/home.png" alt="Image 3">
-                <h2>Home</h2>
-            </div>
             <div class="box-item">
                 <img src="./images/home-page/flow/layanan.png" alt="Image 4">
                 <h2>Cari Layanan</h2>
             </div>
+            <span>></span>
             <div class="box-item">
                 <img src="./images/home-page/flow/konsultan.png" alt="Image 5">
                 <h2>Pilih Konsultan</h2>
             </div>
-            <div class="box-item">
-                <img src="./images/home-page/flow/jadwal.png" alt="Image 6">
-                <h2>Buat Jadwal</h2>
-            </div>
+            <span>></span>
             <div class="box-item">
                 <img src="./images/home-page/flow/chat.png" alt="Image 7">
-                <h2>Chat WhatsApp</h2>
+                <h2>Buat Jadwal</h2>
+            </div>
+            <span>></span>
+            <div class="box-item">
+                <img src="./images/home-page/flow/jadwal.png" alt="Image 6">
+                <h2>Konsultasi</h2>
             </div>
         </div>
     </section>
 
-    <section>
+    <section class="ProfilTeam">
+    <div class="container">
+        <h1>Our Team</h1>
+        <p>Kami bersinergi dengan tujuan yang sama</p>
+        <div class="team-profile">
+            <div class="team-member">
+                <img src="./images/home-page/team/raditya.jpg" alt="Member 1">
+                <a href="https://www.linkedin.com/in/bagus-nararya-nanda-raditya-785410252/">Raditya</a>
+                <p>Web Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/home-page/team/razif.jpg" alt="Member 2">
+                <a href="linkedin.com/in/razif-ilham-932465267/">Razif Ilham Rosadi</a>
+                <p>Front-End Web Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/home-page/team/team1.png"" alt="Member 3">
+                <a href="">David Johnson</a>
+                <p>Full Stack Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="./images/home-page/team/team1.png"" alt="Member 3">
+                <a href="">David Johnson</a>
+                <p>Full Stack Developer</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="supportby">
         <h1 class="judul">Bekerja sama dengan <span class="highlight">kami</span></h1>
         <p class="paragraf"><span class="highlight">YoungMinds</span> menyediakan layanan edukasi dan konsultasi seputar masalah kesehatan mental kamu.</p>
         <div class="gambar">
             <img src="./images/home-page/partner/mbkm.png" alt="Gambar 1">
-            <img src="./images/home-page/partner/dicoding.png" alt="Gambar 2">
+            <img src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_nologo/1973487/1973487-1563248797755-7e69686001d3e.jpg" alt="Dicoding">
             <img src="./images/home-page/partner/posyandu.png" alt="Gambar 3">
         </div>
     </section>
-
 
     `;
   },
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
+    function animateBanner() {
+      const bannerImages = document.querySelectorAll('#hero img');
+      let currentIndex = 0;
+
+      setInterval(() => {
+        bannerImages[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % bannerImages.length;
+        bannerImages[currentIndex].classList.add('active');
+      }, 5000);
+    }
+
+    animateBanner();
   },
 };
 
