@@ -43,8 +43,8 @@ app.use(passport.session());
 app.use(methodOverride('_method'));
 
 app.get('/', checkAuthenticated, (req, res) => {
-  // res.redirect('https://youngmind.netlify.app/');
-  res.redirect('https://youngminds-d6f24.web.app/');
+  res.redirect('https://youngmind.netlify.app/');
+  // res.redirect('https://youngminds-d6f24.web.app/');
 });
 
 app.use((req, res, next) => {
