@@ -1,6 +1,10 @@
 /* Mini Tablet Size Responsive */
 @media screen and (min-width: 480px) {
 
+	header .menu-bar {
+        margin-right: 20px;
+    }
+
 	section {
 		padding: 60px 50px;
 	}
@@ -96,6 +100,10 @@
 		padding: 0px 50px;
 	}
 
+	header .menu-bar {
+		display: none;
+	  }
+
 	header .user-account {
 		display: flex;
 		align-items: center;
@@ -113,9 +121,6 @@
 		color: var(--main-color);
 	}
 
-	button.menu-bar {
-		display: none;
-	}
 
 	/* End Header */
 
