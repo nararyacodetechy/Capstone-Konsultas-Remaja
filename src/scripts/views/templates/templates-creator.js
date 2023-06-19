@@ -21,7 +21,7 @@ const createCardConsultantsTemplate = (consultant) => `
                         </div>
                     </div>
                     <div class="action-card">
-                        <h5>RP${consultant.price}.000</h5>
+                        <h5>${consultant.price}</h5>
                         <div class="button">
                             <a href="/#/detail-consultant-page/${consultant.id}" class="detail">Detail</a>
                             <a href="/#/booking-page/${consultant.id}" class="schedule">Schedule</a>
@@ -31,45 +31,44 @@ const createCardConsultantsTemplate = (consultant) => `
 `;
 
 const createBookingConsultantTemplate = (consultant) => `
-<h1 class="lable-booking">Booking</h1>
+    <h1 class="lable-booking"></h1>
     <section class="booking-container">
-        <div class="booking">
-                <h2>Pilih Jadwal konsultasi</h2>
-                <div>
-                    <form>
-                    <select>${consultant.readySchedule.map((ready) => `
-                            <option value="['${ready.date}','${ready.time}']"><p>${ready.date}</p>
-                            <p>${ready.time}</p></option>
-                        `).join('')}
-                    
-                    </select>
-                    </form>
-                </div>
+      <div class="booking">
+        <h2>Pilih Jadwal konsultasi</h2>
+        <div class="schedule-container">
+          ${consultant.readySchedule.map((ready) => `
+          <button class="schedule-box" id="btn-schedule">
+            <p>${ready.date}</p>
+            <p>${ready.time}</p>
+          </button> `).join('')}
         </div>
-        <div class="selected-profile">
-            <h1>Profile Konsultan</h1>
-            <div>
-            <img src="${consultant.avatar}" alt="profile konselor" />
-            <h1>${consultant.name}</h1>
+      </div>
+      
+      <div class="selected-profile">
+        <div class="container-profile">
+          <h1>Profile Konsultan</h1>
+          <img src="${consultant.avatar}" alt="profile konselor" />
+          <h1>${consultant.name}</h1>
+          <h2>${consultant.specialist}</h2>
+          <h2 class="practicePlace">${consultant.practicePlace}</h2>
+          <div class="rating-star-experience">
+            <div class="rates">
+                <span>⭐</span>
+                <b>${consultant.star}</b>
             </div>
-            <h2>${consultant.specialist}</h2>
-            <h2>${consultant.practicePlace}</h2>
-            <div class="rate-experience">
-                                <div class="rates">
-                                    <span>⭐</span>
-                                    <b>${consultant.star}</b>
-                                </div>
-                                <div class="experience">
-                                    <i class="fa-solid fa-business-time"></i>
-                                    <b>${consultant.experience} tahun</b>
-                                </div>
-                            </div>
-            <div class="price">RP${consultant.price}.000</div>
-            <div class="button">
-            <button><a href="/#/detail-consultant-page/${consultant.id}">Detail</a></button>
-            <button><a href="/#/checkout-page/${consultant.id}">Lanjutkan</a></button>
+            <div class="experience">
+                <i class="fa-solid fa-business-time"></i>
+                <b>${consultant.experience} tahun</b>
             </div>
+          </div>
+          <div class="price">${consultant.price}</div>
         </div>
+        
+        <div class="container-action button">
+          <button><a href="/#/detail-consultant-page/${consultant.id}">Detail</a></button>
+          <button><a href="/#/checkout-page/${consultant.id}">Lanjutkan</a></button>
+        </div>
+      </div>
     </section>
 `;
 
@@ -82,25 +81,25 @@ const createCheckoutConsultantTemplate = (consultant) => `
             </div>
 
             <div class="checkout-label">
-                <h1>Pembayaran</h1>
+                <h1></h1>
             </div>
 
             <div class="transaction-container">
                 <div class="detail-container">
                     <img src="${consultant.avatar}" alt="${consultant.name}" />    
-                    <h1>Profile</h1>
+                    <h1>${consultant.name}</h1>
                     <p class="specialist">${consultant.specialist}</p>
                     <div class="rating">
-                                <div class="rates">
-                                    <span>⭐</span>
-                                    <b>${consultant.star}</b>
-                                </div>
-                                <div class="experience">
-                                    <i class="fa-solid fa-business-time"></i>
-                                    <b>${consultant.experience} tahun</b>
-                                </div>
-                            </div>
-                    <p class="price">Rp${consultant.star}.000</p>
+                      <div class="rates">
+                          <span>⭐</span>
+                          <b>${consultant.star}</b>
+                      </div>
+                      <div class="experience">
+                          <i class="fa-solid fa-business-time"></i>
+                          <b>${consultant.experience} tahun</b>
+                      </div>
+                    </div>
+                    <p class="price">${consultant.price}</p>
                     <div class="white button">
                         <a href="/#/detail-consultant-page/${consultant.id}"><button>Detail</button></a>
                     </div>
@@ -116,49 +115,55 @@ const createCheckoutConsultantTemplate = (consultant) => `
                             <p class="label payment">E-Wallet</p>
                             <input type="radio" id="gopay" name="fav_language" value="Gopay">
                             <label for="html">Gopay</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <img src="/images/checkout-page/icon/GOPAYicon.png" alt="gopay" />
+                            
                             <div class="line-solid-1"></div>
                             <input type="radio" id="linkaja" name="fav_language" value="LinkAja">
                             <label for="css">LinkAja</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <img src="/images/checkout-page/icon/LINKAJAicon.png" alt="linkaja" />
+                            
                             <div class="line-solid-1"></div>
                             <input type="radio" id="ovo" name="fav_language" value="Ovo">
                             <label for="javascript">Ovo</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <img src="/images/checkout-page/icon/OVOicon.png" alt="ovo" />
+                            
                             <div class="line-solid-1"></div>
                             <input type="radio" id="dana" name="fav_language" value="Dana">
                             <label for="javascript">Dana</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <img src="/images/checkout-page/icon/DANAicon.png" alt="dana" />
                         </form>
                     </div>
 
                     <div class="virtual-account">
                         <form action="">
                             <p class="label payment">Virtual Account Transfer</p>
-                            <input type="radio" id="gopay" name="fav_language" value="Gopay">
-                            <label for="html">Gopay</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <input type="radio" id="bri" name="fav_language" value="BRI">
+                            <label for="html">BRI</label>
+                            <img src="/images/checkout-page/icon/BRIicon.png" alt="bri" />
+                            
                             <div class="line-solid-1"></div>
-                            <input type="radio" id="linkaja" name="fav_language" value="LinkAja">
-                            <label for="css">LinkAja</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <input type="radio" id="bca" name="fav_language" value="BCA">
+                            <label for="css">BCA</label>
+                            <img src="/images/checkout-page/icon/BCAicon.png" alt="bca" />
+                            
                             <div class="line-solid-1"></div>
-                            <input type="radio" id="ovo" name="fav_language" value="Ovo">
-                            <label for="javascript">Ovo</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <input type="radio" id="bni" name="fav_language" value="BNI">
+                            <label for="javascript">BNI</label>
+                            <img src="/images/checkout-page/icon/BNIicon.png" alt="bni" />
+                            
                             <div class="line-solid-1"></div>
-                            <input type="radio" id="dana" name="fav_language" value="Dana">
-                            <label for="javascript">Dana</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <input type="radio" id="cimb" name="fav_language" value="CIMB">
+                            <label for="javascript">CIMB</label>
+                            <img src="/images/checkout-page/icon/CIMBicon.png" alt="cimb" />
                         </form>
                     </div>
 
                     <div class="credit-card">
                         <form action="">
                             <p class="label payment">Kartu Kredit</p>
-                            <input type="radio" id="dana" name="fav_language" value="Dana">
-                            <label for="javascript">Dana</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <input type="radio" id="kreditcard" name="fav_language" value="KreditCard">
+                            <label for="javascript">KreditCard</label>
+                            <img src="/images/checkout-page/icon/CREDITCARDicon.png" alt="creditcard" />
                         </form>
                     </div>
 
@@ -173,14 +178,14 @@ const createCheckoutConsultantTemplate = (consultant) => `
                     <div class="line-solid-1"></div>
                     <div class="price-count">
                         <p class="left">Total Harga Produk</p>
-                        <p class="right">Rp${consultant.price}.000</p>
+                        <p class="right">${consultant.price}</p>
                         <p class="left">Diskon</p>
                         <p class="right">-Rp50.000</p>
                     </div>
                     <div class="line dash"></div>
                     <div class="price-sum">
                         <p>Total Tagihan</p>
-                        <p>Rp${consultant.price}.000</p>
+                        <p>${consultant.price}</p>
                     </div>
                     <div class="terms-conditions">
                         <p>Dengan melanjutkan transaksi ini, maka saya 
@@ -204,11 +209,11 @@ const createDetailConsultantTemplate = (consultant) => `
           <div class="detail-main">
             <div class="detail-card cards">
               <div class="detail-profile">
-                <img src="https://static.sehatq.com/cdn-cgi/image/format=auto,width=1080,quality=90/telemed/profile/20210804141201">
+                <img src="${consultant.avatar}">
                 <div class="information-detail">
                   <h5>${consultant.name}</h5>
                   <p>${consultant.specialist}</p>
-                  <span>Rp${consultant.price}.000</span>
+                  <span>${consultant.price}</span>
                 </div>
               </div>
               <div class="notice">
@@ -236,8 +241,8 @@ const createDetailConsultantTemplate = (consultant) => `
                 <tr>
                   <th>Spesialisasi</th>
                   <td>
-                    <p>Hanifa Asra Silmi, M.Psi, Psikolog merupakan seorang psikolog. Beliau merupakan lulusan S1 Psikologi Universitas Indonesia. Beliau melanjutkan S2 Magister Profesi Psikologi Pendidikan Universitas Indonesia. Saat ini beliau berpraktik di Insight Psikologi di Jakarta Timur.</p>
-                    <p>Hanifa Asra Silmi, M.Psi, Psikolog fokus menangani tumbuh kembang anak dan remaja. Beliau juga berpengalaman dalam dan mendampingi orangtua berkaitan dengan parenting skill.</p>
+                    <p>${consultant.name}, Beliau merupakan seorang ${consultant.specialist}. Beliau merupakan lulusan S1 Psikologi ${consultant.alumni}. Saat ini beliau berpraktik di ${consultant.practicePlace}.</p>
+                    <p>${consultant.name}, Psikolog fokus menangani masalah ${consultant.specialist} anak dan remaja. </p>
                   </td>
                 </tr>
               </table>
@@ -264,10 +269,6 @@ const createDetailConsultantTemplate = (consultant) => `
                   <p>${ready.date}</p>
                   <p>${ready.time}</p>
                 </div>`).join('')}
-                <div class="schedule">
-                  <p>Sabtu, 27 Mei 2023</p>
-                  <p>09.00 - 09.30 A.M. WIB</p>
-                </div>
               </div>
             </div>
             <a href="/#/booking-page/${consultant.id}" class="cards button-schedule">Make Schedule</a>
