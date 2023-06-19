@@ -123,52 +123,44 @@ const createDetailConsultantTemplate = (consultant) => `
 `;
 
 const createBookingConsultantTemplate = (consultant) => `
+    <h1 class="lable-booking"></h1>
     <section class="booking-container">
-        <div class="booking">
-                <h2>Pilih Jadwal konsultasi</h2>
-                <div>
-                    <form>
-                      <select>${consultant.readySchedule
-                        .map(
-                          (ready) => `
-                              <option value="['${ready.date}','${ready.time}']"><p>${ready.date}</p>
-                              <p>${ready.time}</p></option>
-                          `
-                        )
-                        .join('')}
-
-                      </select>
-                    </form>
-                </div>
+      <div class="booking">
+        <h2>Pilih Jadwal konsultasi</h2>
+        <div class="schedule-container">
+          ${consultant.readySchedule.map((ready) => `
+          <button class="schedule-box" id="btn-schedule">
+            <p>${ready.date}</p>
+            <p>${ready.time}</p>
+          </button> `).join('')}
         </div>
-        <div class="selected-profile">
-            <h1>Profile Konsultan</h1>
-            <div>
-            <img src="${consultant.avatar}" alt="profile konselor" />
-            <h1>${consultant.name}</h1>
+      </div>
+      
+      <div class="selected-profile">
+        <div class="container-profile">
+          <h1>Profile Konsultan</h1>
+          <img src="${consultant.avatar}" alt="profile konselor" />
+          <h1>${consultant.name}</h1>
+          <h2>${consultant.specialist}</h2>
+          <h2 class="practicePlace">${consultant.practicePlace}</h2>
+          <div class="rating-star-experience">
+            <div class="rates">
+                <span>⭐</span>
+                <b>${consultant.star}</b>
             </div>
-            <h2>${consultant.specialist}</h2>
-            <h2>${consultant.practicePlace}</h2>
-            <div class="rate-experience">
-                                <div class="rates">
-                                    <span>⭐</span>
-                                    <b>${consultant.star}</b>
-                                </div>
-                                <div class="experience">
-                                    <i class="fa-solid fa-business-time"></i>
-                                    <b>${consultant.experience} tahun</b>
-                                </div>
-                            </div>
-            <div class="price">${consultant.price}</div>
-            <div class="button">
-              <button><a href="/#/detail-consultant-page/${
-                consultant.id
-              }">Detail</a></button>
-              <button><a href="/#/checkout-page/${
-                consultant.id
-              }">Lanjutkan</a></button>
+            <div class="experience">
+                <i class="fa-solid fa-business-time"></i>
+                <b>${consultant.experience} tahun</b>
             </div>
+          </div>
+          <div class="price">${consultant.price}</div>
         </div>
+        
+        <div class="container-action button">
+          <a href="/#/detail-consultant-page/${consultant.id}">Detail</a>
+          <a href="/#/checkout-page/${consultant.id}">Lanjutkan</a>
+        </div>
+      </div>
     </section>
 `;
 
@@ -176,34 +168,32 @@ const createCheckoutConsultantTemplate = (consultant) => `
 <div class="grid-container">
             <div class="countdown-container">
                 <span>
-                    Batas waktu pembayaran! <span id="countdown">00:00:00</span>
+                    Batas waktu pembayaran! 00:01:59
                 </span>
             </div>
 
             <div class="checkout-label">
-                <h1>Pembayaran</h1>
+                <h1></h1>
             </div>
 
             <div class="transaction-container">
                 <div class="detail-container">
                     <img src="${consultant.avatar}" alt="${consultant.name}" />    
-                    <div class="information-detail-transaction">
-                      <h1>${consultant.name}</h1>
-                      <p class="specialist">${consultant.specialist}</p>
-                      <div class="rating">
-                          <div class="rates">
-                              <span>⭐</span>
-                              <b>${consultant.star}</b>
-                          </div>
-                          <div class="experience">
-                              <i class="fa-solid fa-business-time"></i>
-                              <b>${consultant.experience} tahun</b>
-                          </div>
+                    <h1>${consultant.name}</h1>
+                    <p class="specialist">${consultant.specialist}</p>
+                    <div class="rating">
+                      <div class="rates">
+                          <span>⭐</span>
+                          <b>${consultant.star}</b>
                       </div>
-                      <p class="price">${consultant.price}</p>
-                      <div class="white button">
-                          <a href="/#/detail-consultant-page/${consultant.id}"><button>Detail</button></a>
+                      <div class="experience">
+                          <i class="fa-solid fa-business-time"></i>
+                          <b>${consultant.experience} tahun</b>
                       </div>
+                    </div>
+                    <p class="price">${consultant.price}</p>
+                    <div class="white button">
+                        <a href="/#/detail-consultant-page/${consultant.id}"><button>Detail</button></a>
                     </div>
                 </div>
 
@@ -217,49 +207,55 @@ const createCheckoutConsultantTemplate = (consultant) => `
                             <p class="label payment">E-Wallet</p>
                             <input type="radio" id="gopay" name="fav_language" value="Gopay">
                             <label for="html">Gopay</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <img src="/images/checkout-page/icon/GOPAYicon.png" alt="gopay" />
+                            
                             <div class="line-solid-1"></div>
                             <input type="radio" id="linkaja" name="fav_language" value="LinkAja">
                             <label for="css">LinkAja</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <img src="/images/checkout-page/icon/LINKAJAicon.png" alt="linkaja" />
+                            
                             <div class="line-solid-1"></div>
                             <input type="radio" id="ovo" name="fav_language" value="Ovo">
                             <label for="javascript">Ovo</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <img src="/images/checkout-page/icon/OVOicon.png" alt="ovo" />
+                            
                             <div class="line-solid-1"></div>
                             <input type="radio" id="dana" name="fav_language" value="Dana">
                             <label for="javascript">Dana</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <img src="/images/checkout-page/icon/DANAicon.png" alt="dana" />
                         </form>
                     </div>
 
                     <div class="virtual-account">
                         <form action="">
                             <p class="label payment">Virtual Account Transfer</p>
-                            <input type="radio" id="gopay" name="fav_language" value="Gopay">
-                            <label for="html">Gopay</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <input type="radio" id="bri" name="fav_language" value="BRI">
+                            <label for="html">BRI</label>
+                            <img src="/images/checkout-page/icon/BRIicon.png" alt="bri" />
+                            
                             <div class="line-solid-1"></div>
-                            <input type="radio" id="linkaja" name="fav_language" value="LinkAja">
-                            <label for="css">LinkAja</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <input type="radio" id="bca" name="fav_language" value="BCA">
+                            <label for="css">BCA</label>
+                            <img src="/images/checkout-page/icon/BCAicon.png" alt="bca" />
+                            
                             <div class="line-solid-1"></div>
-                            <input type="radio" id="ovo" name="fav_language" value="Ovo">
-                            <label for="javascript">Ovo</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <input type="radio" id="bni" name="fav_language" value="BNI">
+                            <label for="javascript">BNI</label>
+                            <img src="/images/checkout-page/icon/BNIicon.png" alt="bni" />
+                            
                             <div class="line-solid-1"></div>
-                            <input type="radio" id="dana" name="fav_language" value="Dana">
-                            <label for="javascript">Dana</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <input type="radio" id="cimb" name="fav_language" value="CIMB">
+                            <label for="javascript">CIMB</label>
+                            <img src="/images/checkout-page/icon/CIMBicon.png" alt="cimb" />
                         </form>
                     </div>
 
                     <div class="credit-card">
                         <form action="">
                             <p class="label payment">Kartu Kredit</p>
-                            <input type="radio" id="dana" name="fav_language" value="Dana">
-                            <label for="javascript">Dana</label>
-                            <img src="https://img.icons8.com/bubbles/50/user.png" alt="gopay" />
+                            <input type="radio" id="kreditcard" name="fav_language" value="KreditCard">
+                            <label for="javascript">KreditCard</label>
+                            <img src="/images/checkout-page/icon/CREDITCARDicon.png" alt="creditcard" />
                         </form>
                     </div>
 
@@ -272,11 +268,17 @@ const createCheckoutConsultantTemplate = (consultant) => `
                     <div class="line-solid-2"></div>    
                     <h1>Ringkasan</h1>
                     <div class="line-solid-1"></div>
-                    <div class="price-count">
+                    <div class="price-count-reciept">
+                      <div class="price-count-column">
                         <p class="left">Total Harga Produk</p>
-                        <p class="right">${consultant.price}</p>
                         <p class="left">Diskon</p>
+                        
+                      </div>
+                      <div class="price-count-column">
+                        <p class="right">${consultant.price}</p>
                         <p class="right">-Rp50.000</p>
+                      </div>  
+                        
                     </div>
                     <div class="line dash"></div>
                     <div class="price-sum">
@@ -288,9 +290,9 @@ const createCheckoutConsultantTemplate = (consultant) => `
                         telah menyetujui <span>Syarat & Ketentuan YoungMinds</span></p>
                     </div>
                     <div class="continue-button">
-                        <button>Bayar</button>
+                        <button>Lanjutkan</button>
                     </div>
-                   
+                    
                     <div id="paymentSuccessPopup" class="popup">
                     <div class="popup-content">
                       <h3>Pembayaran Berhasil!</h3>
@@ -307,12 +309,12 @@ const createCheckoutConsultantTemplate = (consultant) => `
                     </div>
                   </div>
                   
-
                 </div>
             </div>
         </div>
 `;
 
+    
 const createCardArticleTemplate = (article) => `
     <a href="${article.url}" class="list-articles">
         <img src="${article.image}">
