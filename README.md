@@ -78,12 +78,20 @@ In order to run this project, it is necessary that the requirements must be met 
    ```sh
    npm run start-dev
    ```
-5. Run Server
+5. Run Local Server
    ```sh
    npm run start-server
    ```
 
-### Alternative Solution
+### Deployed link
+   ```sh
+   https://youngmind.netlify.app/
+   ```
+
+   ```sh
+   https://youngminds-d6f24.web.app/
+   ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
